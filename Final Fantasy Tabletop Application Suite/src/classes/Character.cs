@@ -15,6 +15,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 
         public int LevelPoints { get; private set; }
 
+        public int[] CharacterStats { get; private set; }
+
         public List<string>? Spells { get; private set; }
 
         public List<string>? Skills { get; private set; }
@@ -24,12 +26,14 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
         public string? CharacterStory { get; set; }
 
         //Constructor - Creates Character Object
-        public Character(string name, string race, string @class, int levelpoints)
+        public Character(string name, string race, string @class, int levelpoints, int[] skills)
         {
             this.Name = name;
             this.Race = race;
             this.Class = @class;
             this.LevelPoints = levelpoints;
+            this.CharacterStats = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
+            this.CharacterStats = skills;
         }
     }
 }

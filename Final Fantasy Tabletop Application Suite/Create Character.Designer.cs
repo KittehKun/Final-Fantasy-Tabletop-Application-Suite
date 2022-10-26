@@ -216,6 +216,7 @@
             this.btnSPRPlus.TabIndex = 28;
             this.btnSPRPlus.Text = "+";
             this.btnSPRPlus.UseVisualStyleBackColor = true;
+            this.btnSPRPlus.Click += new System.EventHandler(this.btnSPRPlus_Click);
             // 
             // btnSPRMinus
             // 
@@ -227,6 +228,7 @@
             this.btnSPRMinus.TabIndex = 27;
             this.btnSPRMinus.Text = "-";
             this.btnSPRMinus.UseVisualStyleBackColor = true;
+            this.btnSPRMinus.Click += new System.EventHandler(this.btnSPRMinus_Click);
             // 
             // statSPR
             // 
@@ -248,6 +250,7 @@
             this.btnDEFPlus.TabIndex = 25;
             this.btnDEFPlus.Text = "+";
             this.btnDEFPlus.UseVisualStyleBackColor = true;
+            this.btnDEFPlus.Click += new System.EventHandler(this.btnDEFPlus_Click);
             // 
             // btnDEFMinus
             // 
@@ -259,6 +262,7 @@
             this.btnDEFMinus.TabIndex = 24;
             this.btnDEFMinus.Text = "-";
             this.btnDEFMinus.UseVisualStyleBackColor = true;
+            this.btnDEFMinus.Click += new System.EventHandler(this.btnDEFMinus_Click);
             // 
             // statDEF
             // 
@@ -280,6 +284,7 @@
             this.btnDEXPlus.TabIndex = 22;
             this.btnDEXPlus.Text = "+";
             this.btnDEXPlus.UseVisualStyleBackColor = true;
+            this.btnDEXPlus.Click += new System.EventHandler(this.btnDEXPlus_Click);
             // 
             // btnDEXMinus
             // 
@@ -291,6 +296,7 @@
             this.btnDEXMinus.TabIndex = 21;
             this.btnDEXMinus.Text = "-";
             this.btnDEXMinus.UseVisualStyleBackColor = true;
+            this.btnDEXMinus.Click += new System.EventHandler(this.btnDEXMinus_Click);
             // 
             // statDEX
             // 
@@ -312,6 +318,7 @@
             this.btnMAGPlus.TabIndex = 19;
             this.btnMAGPlus.Text = "+";
             this.btnMAGPlus.UseVisualStyleBackColor = true;
+            this.btnMAGPlus.Click += new System.EventHandler(this.btnMAGPlus_Click);
             // 
             // btnMAGMinus
             // 
@@ -323,6 +330,7 @@
             this.btnMAGMinus.TabIndex = 18;
             this.btnMAGMinus.Text = "-";
             this.btnMAGMinus.UseVisualStyleBackColor = true;
+            this.btnMAGMinus.Click += new System.EventHandler(this.btnMAGMinus_Click);
             // 
             // statMAG
             // 
@@ -344,6 +352,7 @@
             this.btnSTRPlus.TabIndex = 16;
             this.btnSTRPlus.Text = "+";
             this.btnSTRPlus.UseVisualStyleBackColor = true;
+            this.btnSTRPlus.Click += new System.EventHandler(this.btnSTRPlus_Click);
             // 
             // btnSTRMinus
             // 
@@ -355,6 +364,7 @@
             this.btnSTRMinus.TabIndex = 15;
             this.btnSTRMinus.Text = "-";
             this.btnSTRMinus.UseVisualStyleBackColor = true;
+            this.btnSTRMinus.Click += new System.EventHandler(this.btnSTRMinus_Click);
             // 
             // statSTR
             // 

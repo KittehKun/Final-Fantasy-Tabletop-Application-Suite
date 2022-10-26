@@ -1,9 +1,15 @@
-﻿namespace Final_Fantasy_Tabletop_Application_Suite
+﻿using Final_Fantasy_Tabletop_Application_Suite.src.classes;
+using Final_Fantasy_Tabletop_Application_Suite.src.utilities;
+using System.Diagnostics;
+
+namespace Final_Fantasy_Tabletop_Application_Suite
 {
     public partial class CreateCharacter : Form
     {
         private int statPoints;
-        private int currentHPPoints, currentMPPoints;
+        private int currentHPPoints, currentMPPoints, currentSTRPoints, currentMAGPoints, currentDEXPoints, currentDEFPoints, currentSPRPoints;
+        private Character? character;
+
         public CreateCharacter()
         {
             InitializeComponent();
@@ -34,22 +40,59 @@
             {
                 characterName = txtCharName.Text;
             }
+            else
+            {
+                MessageBox.Show("Character must have a name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             string characterRace;
-            if (!String.IsNullOrEmpty(comboBoxRaces.SelectedText))
+            if (!String.IsNullOrEmpty(comboBoxRaces.SelectedItem.ToString()))
             {
-                characterRace = comboBoxRaces.SelectedText;
+                characterRace = comboBoxRaces.SelectedItem.ToString()!;
+            }
+            else
+            {
+                MessageBox.Show("Character must have a race.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             string characterPrimaryClass;
-            if (!String.IsNullOrEmpty(comboBoxClasses.SelectedText))
+            if (!String.IsNullOrEmpty(comboBoxClasses.SelectedItem.ToString()))
             {
-                characterPrimaryClass = comboBoxClasses.SelectedText;
+                characterPrimaryClass = comboBoxClasses.SelectedItem.ToString()!;
+            }
+            else
+            {
+                MessageBox.Show("Character must have a class.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             string? characterStory;
             characterStory = txtCharacterStory.Text;
 
+            int[] skills = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
+            skills[0] = int.Parse(statHP.Text);
+            skills[1] = int.Parse(statMP.Text);
+            skills[2] = int.Parse(statSTR.Text);
+            skills[3] = int.Parse(statMAG.Text);
+            skills[4] = int.Parse(statDEX.Text);
+            skills[5] = int.Parse(statDEF.Text);
+            skills[6] = int.Parse(statSPR.Text);
+
+            int levelPoints = int.Parse(statRemaining.Text);
+
+            this.character = new Character(characterName, characterRace, characterPrimaryClass, levelPoints, skills); //Creates a Character
+
+            this.character.CharacterStory = characterStory; //Sets backstory
+            Debug.WriteLine("Character Created with the following information:");
+            Debug.WriteLine($"Character Name: {this.character.Name}");
+            Debug.WriteLine($"Race: {this.character.Race}");
+            Debug.WriteLine($"Primary Class: {this.character.Class}");
+            Debug.WriteLine($"Level Points: {this.character.LevelPoints}");
+
+            CharacterSlots.characters.Add(this.character);
+            SaveCharacter.Save(this.character);
         }
 
         private void btnHPPlus_Click(object sender, EventArgs e)
@@ -111,5 +154,156 @@
                 return;
             }
         }
+
+        private void btnMAGPlus_Click(object sender, EventArgs e)
+        {
+            if (this.statPoints > 0)
+            {
+                this.currentMAGPoints++;
+                this.statPoints--;
+                statMAG.Text = this.currentMAGPoints.ToString();
+                this.statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnDEXPlus_Click(object sender, EventArgs e)
+        {
+            if (this.statPoints > 0)
+            {
+                this.currentDEXPoints++;
+                this.statPoints--;
+                statDEX.Text = this.currentDEXPoints.ToString();
+                this.statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnDEXMinus_Click(object sender, EventArgs e)
+        {
+            if (this.currentDEXPoints > 0)
+            {
+                this.currentDEXPoints--;
+                this.statPoints++;
+                statDEX.Text = this.currentDEXPoints.ToString();
+                statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnDEFPlus_Click(object sender, EventArgs e)
+        {
+            if (this.statPoints > 0)
+            {
+                this.currentDEFPoints++;
+                this.statPoints--;
+                statDEF.Text = this.currentDEFPoints.ToString();
+                this.statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnDEFMinus_Click(object sender, EventArgs e)
+        {
+            if (this.currentDEFPoints > 0)
+            {
+                this.currentDEFPoints--;
+                this.statPoints++;
+                statDEF.Text = this.currentDEFPoints.ToString();
+                statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnSPRPlus_Click(object sender, EventArgs e)
+        {
+            if (this.statPoints > 0)
+            {
+                this.currentSPRPoints++;
+                this.statPoints--;
+                statSPR.Text = this.currentSPRPoints.ToString();
+                this.statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnSPRMinus_Click(object sender, EventArgs e)
+        {
+            if (this.currentSPRPoints > 0)
+            {
+                this.currentSPRPoints--;
+                this.statPoints++;
+                statSPR.Text = this.currentSPRPoints.ToString();
+                statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnMAGMinus_Click(object sender, EventArgs e)
+        {
+            if (this.currentSTRPoints > 0)
+            {
+                this.currentMAGPoints--;
+                this.statPoints++;
+                statMAG.Text = this.currentMAGPoints.ToString();
+                statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnSTRPlus_Click(object sender, EventArgs e)
+        {
+            if (this.statPoints > 0)
+            {
+                this.currentSTRPoints++;
+                this.statPoints--;
+                statSTR.Text = this.currentSTRPoints.ToString();
+                this.statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
+        private void btnSTRMinus_Click(object sender, EventArgs e)
+        {
+            if (this.currentSTRPoints > 0)
+            {
+                this.currentSTRPoints--;
+                this.statPoints++;
+                statSTR.Text = this.currentSTRPoints.ToString();
+                statRemaining.Text = this.statPoints.ToString();
+            }
+            else
+            {
+                return;
+            }
+        }
+
     }
 }

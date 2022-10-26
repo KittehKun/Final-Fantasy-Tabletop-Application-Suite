@@ -28,5 +28,13 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             createCharacter.ShowDialog();
             this.Visible = true;
         }
+
+        private void btnCreateCharacter_Click(object sender, EventArgs e)
+        {
+            CreateCharacter createCharacter = new(); //Creates new form object
+            this.Visible = false;
+            createCharacter.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

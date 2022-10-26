@@ -7,6 +7,7 @@
         public string? Race { get; }
         public string? Class { get; }
         public int LevelPoints { get; }
+        public int[] CharacterStats { get; }
         public List<string>? Spells { get; }
         public List<string>? Skills { get; }
         public List<string>? Abilities { get; }
