@@ -36,5 +36,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             createCharacter.ShowDialog();
             this.Visible = true;
         }
+
+        private void btnLoadCharacter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

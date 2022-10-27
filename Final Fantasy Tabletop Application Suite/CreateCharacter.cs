@@ -93,6 +93,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
             CharacterSlots.characters.Add(this.character);
             SaveCharacter.Save(this.character);
+
+            Close();
         }
 
         private void btnHPPlus_Click(object sender, EventArgs e)

@@ -144,6 +144,7 @@
             this.btnLoadCharacter.TabIndex = 1;
             this.btnLoadCharacter.Text = "Load Character";
             this.btnLoadCharacter.UseVisualStyleBackColor = true;
+            this.btnLoadCharacter.Click += new System.EventHandler(this.btnLoadCharacter_Click);
             // 
             // btnCreateCharacter
             // 
