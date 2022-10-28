@@ -1,3 +1,4 @@
+using Final_Fantasy_Tabletop_Application_Suite.src.utilities;
 using System.Diagnostics;
 
 namespace Final_Fantasy_Tabletop_Application_Suite
@@ -39,7 +40,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
-
+            //Test Load Character and print out string that is grabbed
+            CharacterUtilities.Load("KittehKun"); //Expected Output: KittehKun.json if exists
         }
     }
 }

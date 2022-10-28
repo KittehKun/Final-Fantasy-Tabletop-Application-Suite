@@ -92,7 +92,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             Debug.WriteLine($"Level Points: {this.character.LevelPoints}");
 
             CharacterSlots.characters.Add(this.character);
-            SaveCharacter.Save(this.character);
+            CharacterUtilities.Save(this.character);
 
             Close();
         }
