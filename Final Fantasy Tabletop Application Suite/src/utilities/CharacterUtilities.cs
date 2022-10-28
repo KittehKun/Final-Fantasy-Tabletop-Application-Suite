@@ -21,6 +21,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
             File.WriteAllText($"{savePath}{fileName}", json);
         }
 
+        //Method will attempt to load .JSON file from documents
         public static void Load(string characterName)
         {
             string fileName = $"{characterName}.json";
