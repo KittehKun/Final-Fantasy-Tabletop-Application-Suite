@@ -2,7 +2,6 @@
 {
     internal interface ICharacter
     {
-        public int CharacterId { get; }
         public string? Name { get; }
         public string? Race { get; }
         public string? Class { get; }

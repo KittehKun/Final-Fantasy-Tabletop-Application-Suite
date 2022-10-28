@@ -5,8 +5,6 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
     internal class Character : ICharacter
     {
         //Interface
-        public int CharacterId { get; private set; }
-
         public string? Name { get; private set; }
 
         public string? Race { get; private set; }
