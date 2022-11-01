@@ -43,5 +43,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             //Test Load Character and print out string that is grabbed
             CharacterUtilities.Load("KittehKun"); //Expected Output: KittehKun.json if exists
         }
+
+        private void btnRegularCalculator_Click(object sender, EventArgs e)
+        {
+            Process.Start("Calc");
+        }
     }
 }

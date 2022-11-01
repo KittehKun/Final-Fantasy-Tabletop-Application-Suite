@@ -177,6 +177,7 @@
             this.btnRegularCalculator.TabIndex = 5;
             this.btnRegularCalculator.Text = "Regular Calculator";
             this.btnRegularCalculator.UseVisualStyleBackColor = true;
+            this.btnRegularCalculator.Click += new System.EventHandler(this.btnRegularCalculator_Click);
             // 
             // btnDefenseCalculator
             // 

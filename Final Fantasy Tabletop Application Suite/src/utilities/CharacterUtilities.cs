@@ -12,7 +12,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
         public static void Save(Character character)
         {
             string fileName = $"{character.Name}.json";
-            string json = JsonSerializer.Serialize(character);
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            string json = JsonSerializer.Serialize(character, options);
             Debug.WriteLine(json);
             Debug.WriteLine(fileName);
 
@@ -28,14 +29,21 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
             try
             {
                 string loadPath = Path.Combine(savePath, fileName);
+                var options = new JsonSerializerOptions
+                {
+                    WriteIndented = true,
+                };
                 string jsonContents = File.ReadAllText(loadPath);
+
+                var character = JsonSerializer.Deserialize<Character>(jsonContents);
+
                 Debug.WriteLine(jsonContents);
                 Debug.WriteLine("\nCharacter Loaded!");
             }
             catch (Exception error)
             {
                 Debug.WriteLine(error.Message);
-                MessageBox.Show($"ERROR: {error.Message}", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"ERROR: {error.Message}\n\nThe character file may not exist.", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }

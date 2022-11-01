@@ -91,7 +91,6 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             Debug.WriteLine($"Primary Class: {this.character.Class}");
             Debug.WriteLine($"Level Points: {this.character.LevelPoints}");
 
-            CharacterSlots.characters.Add(this.character);
             CharacterUtilities.Save(this.character);
 
             Close();
