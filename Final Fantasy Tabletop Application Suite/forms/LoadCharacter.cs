@@ -58,7 +58,15 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
         private void dataGridCharacters_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            Debug.WriteLine(dataGridCharacters.Rows[e.RowIndex].Cells[0].Value); //Expected Output: Character Name
+            var characterRow = dataGridCharacters.Rows[e.RowIndex];
+            var characterName = characterRow.Cells[0].Value.ToString(); //Expected Output: Character Name of row selected
+            Debug.WriteLine(characterName);
+
+            //Check if a character name was grabbed
+            if (String.IsNullOrEmpty(characterName))
+            {
+                Debug.WriteLine("Loading super mega ultra character!!!");
+            }
         }
     }
 }
