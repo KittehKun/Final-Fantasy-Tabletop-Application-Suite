@@ -82,6 +82,7 @@
             this.dataGridCharacters.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCharacters.Size = new System.Drawing.Size(520, 512);
             this.dataGridCharacters.TabIndex = 0;
+            this.dataGridCharacters.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCharacters_CellContentDoubleClick);
             // 
             // CharacterName
             // 

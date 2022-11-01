@@ -24,33 +24,41 @@ namespace Final_Fantasy_Tabletop_Application_Suite
                 string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Kitteh's Application Suite/Jared's Final Fantasy Tabletop RPG/characters/");
                 string[] files = Directory.GetFiles(path, "*.json"); //Search only for JSON files
 
-                //Loop through all files that were found in the Documents folder
-                foreach (string filePath in files)
+                if (files.Length != 0) //Check if empty array was returned
                 {
-                    string characterName = Path.GetFileNameWithoutExtension(filePath);
-                    var character = CharacterUtilities.Load(characterName);
-
-                    if (character != null) //Check if Characters were loaded properly
+                    //Loop through all files that were found in the Documents folder
+                    foreach (string filePath in files)
                     {
-                        characters.Add(character);
-                        Debug.WriteLine($"{characterName} was loaded to the list!");
+                        string characterName = Path.GetFileNameWithoutExtension(filePath);
+                        var character = CharacterUtilities.Load(characterName);
+
+                        if (character != null) //Check if Characters were loaded properly
+                        {
+                            characters.Add(character);
+                            Debug.WriteLine($"{characterName} was loaded to the list!");
+                        }
                     }
+
+                    var grid = dataGridCharacters;
+                    //Add loaded characters into DataGrid component
+                    foreach (Character character in characters)
+                    {
+                        string[] row = { $"{character.Name}", $"{character.Race}", $"{character.Class}", $"{character.LevelPoints}" };
+                        grid.Rows.Add(row);
+                    }
+                    return;
                 }
-
-                var grid = dataGridCharacters;
-                //Add loaded characters into DataGrid component
-                foreach (Character character in characters)
-                {
-                    string[] row = { $"{character.Name}", $"{character.Race}", $"{character.Class}", $"{character.LevelPoints}" };
-                    grid.Rows.Add(row);
-                }
-
-
+                MessageBox.Show("WARNING: No characters found.", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception error)
             {
                 MessageBox.Show($"ERROR: {error.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void dataGridCharacters_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Debug.WriteLine(dataGridCharacters.Rows[e.RowIndex].Cells[0].Value); //Expected Output: Character Name
         }
     }
 }
