@@ -32,21 +32,27 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
         private void btnCreateCharacter_Click(object sender, EventArgs e)
         {
-            CreateCharacter createCharacter = new(); //Creates new form object
+            //CreateCharacter createCharacter = new(); //Creates new form object
             this.Visible = false;
-            createCharacter.ShowDialog();
+            _ = new CreateCharacter().ShowDialog(); //Refactored from above line
             this.Visible = true;
         }
 
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
             //Test Load Character and print out string that is grabbed
-            CharacterUtilities.Load("KittehKun"); //Expected Output: KittehKun.json if exists
+            var character = CharacterUtilities.Load("KittehKun")!; //Expected Output: KittehKun.json if exists
+            if (character != null) //Check if Character was properly loaded
+            {
+                this.Visible = false;
+                _ = new LoadCharacter().ShowDialog(); //Discard value used just for calling the form
+                this.Visible = true;
+            }
         }
 
         private void btnRegularCalculator_Click(object sender, EventArgs e)
         {
-            Process.Start("Calc");
+            Process.Start("Calc"); //Starts Windows Calculator
         }
     }
 }

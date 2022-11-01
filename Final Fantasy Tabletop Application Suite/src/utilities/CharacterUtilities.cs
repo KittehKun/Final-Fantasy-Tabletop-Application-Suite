@@ -23,7 +23,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
         }
 
         //Method will attempt to load .JSON file from documents
-        public static void Load(string characterName)
+        public static Character? Load(string characterName)
         {
             string fileName = $"{characterName}.json";
             try
@@ -39,11 +39,14 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
 
                 Debug.WriteLine(jsonContents);
                 Debug.WriteLine("\nCharacter Loaded!");
+
+                return character;
             }
             catch (Exception error)
             {
                 Debug.WriteLine(error.Message);
                 MessageBox.Show($"ERROR: {error.Message}\n\nThe character file may not exist.", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
             }
 
         }
