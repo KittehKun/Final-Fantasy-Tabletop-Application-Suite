@@ -37,15 +37,13 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
 
                 var character = JsonSerializer.Deserialize<Character>(jsonContents);
 
-                Debug.WriteLine(jsonContents);
-                Debug.WriteLine("\nCharacter Loaded!");
-
+                //Debug.WriteLine(jsonContents);
                 return character;
             }
             catch (Exception error)
             {
                 Debug.WriteLine(error.Message);
-                MessageBox.Show($"ERROR: {error.Message}\n\nThe character file may not exist.", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"ERROR: {error.Message}", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return null;
             }
 

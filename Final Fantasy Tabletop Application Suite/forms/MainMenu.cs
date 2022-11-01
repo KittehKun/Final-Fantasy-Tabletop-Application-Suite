@@ -1,4 +1,3 @@
-using Final_Fantasy_Tabletop_Application_Suite.src.utilities;
 using System.Diagnostics;
 
 namespace Final_Fantasy_Tabletop_Application_Suite
@@ -41,13 +40,12 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
             //Test Load Character and print out string that is grabbed
-            var character = CharacterUtilities.Load("KittehKun")!; //Expected Output: KittehKun.json if exists
-            if (character != null) //Check if Character was properly loaded
-            {
-                this.Visible = false;
-                _ = new LoadCharacter().ShowDialog(); //Discard value used just for calling the form
-                this.Visible = true;
-            }
+            //Character? character = CharacterUtilities.Load("KittehKun"); //Expected Output: KittehKun.json if exists
+
+            //Open LoadCharacter.cs form
+            this.Visible = false;
+            _ = new LoadCharacter().ShowDialog(); //Discard value used just for calling the form
+            this.Visible = true;
         }
 
         private void btnRegularCalculator_Click(object sender, EventArgs e)
