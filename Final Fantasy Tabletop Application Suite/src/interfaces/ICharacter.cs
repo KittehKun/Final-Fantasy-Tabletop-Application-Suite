@@ -10,8 +10,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.interfaces
         public int LevelPoints { get; }
         public int[] CharacterStats { get; }
         public List<string>? Spells { get; }
-        public List<Skills>? Skills { get; }
-        public List<string>? Abilities { get; }
+        public List<Skills>? Skills { get; } //Abilities classified here as skills
         public string? CharacterStory { get; set; }
 
     }

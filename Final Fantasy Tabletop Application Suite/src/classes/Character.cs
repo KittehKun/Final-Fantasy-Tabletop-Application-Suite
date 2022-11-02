@@ -21,9 +21,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 
         public List<string>? Spells { get; private set; }
 
-        public List<Skills>? Skills { get; private set; }
-
-        public List<string>? Abilities { get; private set; }
+        public List<Skills>? Skills { get; private set; } //Abilities classified here as skills
 
         public string? CharacterStory { get; set; }
 
@@ -48,7 +46,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
         }
 
         [JsonConstructor] //Constructor arguments MUST match the properties of the class otherwise an unhandled exception will occur
-        public Character(string Name, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<Skills> Skills, List<string> Abilities, string CharacterStory, List<string> inventory)
+        public Character(string Name, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<Skills> Skills, string CharacterStory, List<string> inventory)
         {
             this.Name = Name;
             this.Race = Race;
@@ -57,7 +55,6 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.CharacterStats = CharacterStats;
             this.Spells = Spells;
             this.Skills = Skills;
-            this.Abilities = Abilities;
             this.CharacterStory = CharacterStory;
             this.inventory = inventory;
         }
