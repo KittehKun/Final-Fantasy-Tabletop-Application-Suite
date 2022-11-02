@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="1" name="Heavy Shot" type="Ranged" potency="100" cooldown="0" target="1" description="Take aim and snipe your foe"></Skill>
+	<Skill level="2" name="Straight Shot" type="Ranged" potency="190" cooldown="-" target="1" description="Follw up to Heavy Shot"></Skill>
+	<Skill level="4" name="Venomous Bite" type="Ranged" potency="40%" cooldown="-" target="1" description="Snipe your foe with a poison shot"></Skill>
+	<Skill level="5" name="Leg Graze" type="Sabotage" potency="40%" cooldown="3" target="1" description="Lower an enemy down the turn order"></Skill>
+	<Skill level="8" name="Second Wind" type="Heal" potency="100" cooldown="5" target="Self" description="Recover a moderate amount of HP by DEX"></Skill>
+	<Skill level="8" name="Barrage" type="Ranged" potency="80" cooldown="3" target="Random" description="Take 4 random shots at enemies"></Skill>
+	<Skill level="12" name="Bloodletter" type="Ranged" potency="150" cooldown="3" target="1" description="Take a charged shot at an enemy"></Skill>
+	<Skill level="15" name="Repelling Shot" type="Synergy" potency="30%" cooldown="5" target="Self" description="Reduce damage taken for 1 turn"></Skill>
+	<Skill level="18" name="Quick Nock" type="Ranged" potency="120" cooldown="3" target="AoE" description="Spray your enemies with a flurry of shot"></Skill>
+	<Skill level="20" name="Tactician" type="Synergy" potency="15%" cooldown="5" target="AoE" description="Reduce party damage for 2 turns"></Skill>
+	<Skill level="20" name="Double Shot" type="Technical" potency="-" cooldown="5" target="Self" description="Use 2 ranged attacks in succession"></Skill>
+	<Skill level="22" name="Bola Shot" type="Sabotage" potency="40" cooldown="4" target="1" description="Take a shot and slow an enemy 1 space"></Skill>
+	<Skill level="25" name="Snipers Intuition" type="Synergy" potency="40%" cooldown="X" target="Self" description="Empower ranged attacks for 4 turns"></Skill>
+	<Skill level="25" name="Silent Shot" type="Ranged" potency="100" cooldown="-" target="1" description="Chance of silencing a target"></Skill>
+	<Skill level="28" name="Spike Rounds" type="Ranged" potency="30" cooldown="5" target="1" description="Release a frag round, damage for 3 turns"></Skill>
+	<Skill level="30" name="Fast Shot" type="Ranged" potency="110/30%" cooldown="3" target="1" description="Chance of following up with a second shot"></Skill>
+</SkillsList>

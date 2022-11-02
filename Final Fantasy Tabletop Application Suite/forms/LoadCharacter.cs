@@ -63,13 +63,14 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         {
             var characterRow = dataGridCharacters.Rows[e.RowIndex];
             var characterName = characterRow.Cells[0].Value.ToString(); //Expected Output: Character Name of row selected
-            Debug.WriteLine(characterName);
 
             //Check if a character name was grabbed
-            if (String.IsNullOrEmpty(characterName))
+            if (!String.IsNullOrEmpty(characterName))
             {
                 Debug.WriteLine("Loading super mega ultra character!!!");
+                //Opens a Character's form
             }
+            return;
         }
     }
 }

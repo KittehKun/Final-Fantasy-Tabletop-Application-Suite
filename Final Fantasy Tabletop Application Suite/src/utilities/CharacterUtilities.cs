@@ -1,6 +1,7 @@
 ﻿using Final_Fantasy_Tabletop_Application_Suite.src.classes;
 using System.Diagnostics;
 using System.Text.Json;
+using System.Xml;
 
 namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
 {
@@ -54,6 +55,47 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
                 return null;
             }
 
+        }
+
+        /// <summary>
+        /// Loads character's skills from the skills database.
+        /// </summary>
+        /// <param name="characterClass">A Character's class. Used for finding what skills to load.</param>
+        /// <returns>A List of skills based on a Character's class.</returns>
+        public static List<Skills> LoadSkills(string characterClass)
+        {
+            List<Skills> skills = new List<Skills>();
+            string path = $"src/data/character/skills/{characterClass}Skills.xml";
+            try
+            {
+                XmlDocument document = new();
+                document.Load(path);
+                Debug.WriteLine($"{characterClass}Skills.xml loaded!");
+
+                foreach (XmlNode node in document.DocumentElement!.ChildNodes)
+                {
+                    if (node.Attributes != null) //Check if there are attributes in child node
+                    {
+                        int level = int.Parse(node.Attributes[0].Value);
+                        string name = node.Attributes[1].Value;
+                        string type = node.Attributes[2].Value;
+                        string potency = node.Attributes[3].Value;
+                        string cooldown = node.Attributes[4].Value;
+                        string target = node.Attributes[5].Value;
+                        string description = node.Attributes[6].Value;
+                        skills.Add(new Skills(level, name, type, potency, cooldown, target, description));
+                    }
+                }
+
+                return skills;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.StackTrace}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(404);
+            }
+
+            return null; //Placeholder
         }
     }
 }

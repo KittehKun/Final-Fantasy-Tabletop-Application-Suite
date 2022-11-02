@@ -12,7 +12,12 @@
   <ItemGroup>
     <Folder Include="src\data\character\abilities\" />
     <Folder Include="src\data\character\spells\" />
-    <Folder Include="src\data\character\skills\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="src\data\character\skills\ArcherSkills.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

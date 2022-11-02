@@ -82,29 +82,47 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             string? characterStory;
             characterStory = txtCharacterStory.Text;
 
-            int[] skills = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
-            skills[0] = int.Parse(statHP.Text);
-            skills[1] = int.Parse(statMP.Text);
-            skills[2] = int.Parse(statSTR.Text);
-            skills[3] = int.Parse(statMAG.Text);
-            skills[4] = int.Parse(statDEX.Text);
-            skills[5] = int.Parse(statDEF.Text);
-            skills[6] = int.Parse(statSPR.Text);
+            int[] stats = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
+            stats[0] = int.Parse(statHP.Text);
+            stats[1] = int.Parse(statMP.Text);
+            stats[2] = int.Parse(statSTR.Text);
+            stats[3] = int.Parse(statMAG.Text);
+            stats[4] = int.Parse(statDEX.Text);
+            stats[5] = int.Parse(statDEF.Text);
+            stats[6] = int.Parse(statSPR.Text);
 
             int levelPoints = int.Parse(statRemaining.Text);
 
-            this.character = new Character(characterName, characterRace, characterPrimaryClass, levelPoints, skills); //Creates a Character
+            this.character = new Character(characterName, characterRace, characterPrimaryClass, levelPoints, stats); //Creates a Character
 
             this.character.CharacterStory = characterStory; //Sets backstory
-            Debug.WriteLine("Character Created with the following information:");
-            Debug.WriteLine($"Character Name: {this.character.Name}");
-            Debug.WriteLine($"Race: {this.character.Race}");
-            Debug.WriteLine($"Primary Class: {this.character.Class}");
-            Debug.WriteLine($"Level Points: {this.character.LevelPoints}");
+
+            //The following methods are class specific
+            List<Skills> skills = ProcessSkills(characterPrimaryClass);
+            foreach (Skills skill in skills)
+            {
+                Debug.WriteLine(skill.Name); //Expected Output: Up to level 30 skills
+            }
 
             CharacterUtilities.Save(this.character);
 
             Close();
+        }
+
+        private List<Skills> ProcessSkills(string characterClass)
+        {
+            List<Skills> skills = new List<Skills>();
+            switch (characterClass)
+            {
+                case "Archer":
+                    skills = CharacterUtilities.LoadSkills(characterClass);
+                    break;
+                default:
+                    Debug.WriteLine("KittehKun your code is broken. Fix it~");
+                    break;
+            }
+
+            return skills;
         }
 
         private void btnHPPlus_Click(object sender, EventArgs e)

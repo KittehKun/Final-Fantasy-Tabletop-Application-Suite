@@ -5,6 +5,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 {
     internal class Character : ICharacter
     {
+        //Fields
+        private List<string> inventory;
+
         //Interface
         public string Name { get; private set; }
 
@@ -18,7 +21,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 
         public List<string>? Spells { get; private set; }
 
-        public List<string>? Skills { get; private set; }
+        public List<Skills>? Skills { get; private set; }
 
         public List<string>? Abilities { get; private set; }
 
@@ -41,10 +44,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.LevelPoints = levelpoints;
             this.CharacterStats = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
             this.CharacterStats = stats;
+            this.inventory = new List<string>();
         }
 
         [JsonConstructor] //Constructor arguments MUST match the properties of the class otherwise an unhandled exception will occur
-        public Character(string Name, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<string> Skills, List<string> Abilities, string CharacterStory)
+        public Character(string Name, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<Skills> Skills, List<string> Abilities, string CharacterStory, List<string> inventory)
         {
             this.Name = Name;
             this.Race = Race;
@@ -55,6 +59,32 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.Skills = Skills;
             this.Abilities = Abilities;
             this.CharacterStory = CharacterStory;
+            this.inventory = inventory;
+        }
+
+        //Methods
+        /// <summary>
+        /// Gets a Character's inventory.
+        /// </summary>
+        /// <returns>A List of strings.</returns>
+        public List<string> GetInventory()
+        {
+            return this.inventory;
+        }
+
+        /// <summary>
+        /// Adds an item to a Character's inventory. Prompts for confirmation.
+        /// </summary>
+        /// <param name="item">The item to be added.</param>
+        public void AddToInventory(string item)
+        {
+            DialogResult result = MessageBox.Show($"Add {item} to inventory?", "INFO", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                this.inventory.Add(item);
+                return;
+            }
+            return;
         }
     }
 }

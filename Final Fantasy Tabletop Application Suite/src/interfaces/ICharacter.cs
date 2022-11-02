@@ -1,4 +1,6 @@
-﻿namespace Final_Fantasy_Tabletop_Application_Suite.src.interfaces
+﻿using Final_Fantasy_Tabletop_Application_Suite.src.classes;
+
+namespace Final_Fantasy_Tabletop_Application_Suite.src.interfaces
 {
     internal interface ICharacter
     {
@@ -8,7 +10,7 @@
         public int LevelPoints { get; }
         public int[] CharacterStats { get; }
         public List<string>? Spells { get; }
-        public List<string>? Skills { get; }
+        public List<Skills>? Skills { get; }
         public List<string>? Abilities { get; }
         public string? CharacterStory { get; set; }
 
