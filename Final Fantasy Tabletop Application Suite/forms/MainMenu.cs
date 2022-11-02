@@ -16,11 +16,19 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             Debug.WriteLine(savePath);
         }
 
+        /// <summary>
+        /// Exits the application.
+        /// </summary>
         private void toolbarExit_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
         }
 
+        /// <summary>
+        /// Opens Character Creation form.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
         private void toolbarCreateCharacter_Click(object sender, EventArgs e)
         {
             CreateCharacter createCharacter = new(); //Creates new form object
@@ -29,6 +37,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             this.Visible = true;
         }
 
+        /// <summary>
+        /// Opens Character Creation form.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
         private void btnCreateCharacter_Click(object sender, EventArgs e)
         {
             //CreateCharacter createCharacter = new(); //Creates new form object
@@ -37,17 +50,24 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             this.Visible = true;
         }
 
+        /// <summary>
+        /// Opens Load Character form.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
         private void btnLoadCharacter_Click(object sender, EventArgs e)
         {
-            //Test Load Character and print out string that is grabbed
-            //Character? character = CharacterUtilities.Load("KittehKun"); //Expected Output: KittehKun.json if exists
-
             //Open LoadCharacter.cs form
             this.Visible = false;
             _ = new LoadCharacter().ShowDialog(); //Discard value used just for calling the form
             this.Visible = true;
         }
 
+        /// <summary>
+        /// Opens Windows built-in calculator.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
         private void btnRegularCalculator_Click(object sender, EventArgs e)
         {
             Process.Start("Calc"); //Starts Windows Calculator

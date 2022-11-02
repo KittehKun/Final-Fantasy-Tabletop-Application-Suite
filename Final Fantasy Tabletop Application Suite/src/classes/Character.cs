@@ -25,6 +25,14 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
         public string? CharacterStory { get; set; }
 
         //Constructor - Creates Character Object
+        /// <summary>
+        /// Initializes an instance of the <c>Character</c> class.
+        /// </summary>
+        /// <param name="name">The character's name.</param>
+        /// <param name="race">The character's race.</param>
+        /// <param name="class">The character's primary class.</param>
+        /// <param name="levelpoints">The character's current available leveling points.</param>
+        /// <param name="stats">The character's stats.</param>
         public Character(string name, string race, string @class, int levelpoints, int[] stats)
         {
             this.Name = name;

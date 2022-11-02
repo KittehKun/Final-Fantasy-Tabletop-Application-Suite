@@ -16,6 +16,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         //Method will populate form with all the Characters found in the Documents folder
+        /// <summary>
+        /// Populates DataGridView with all characters found in the user's documents.
+        /// </summary>
         private void SelectCharacter()
         {
             //Find all .JSON files in Documents folder

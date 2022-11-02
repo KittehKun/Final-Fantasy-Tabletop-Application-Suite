@@ -8,7 +8,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
     {
         private static string savePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Kitteh's Application Suite/Jared's Final Fantasy Tabletop RPG/characters/");
 
-        //Method will create a .JSON file and save it to documents
+        /// <summary>
+        /// Saves a <c>Character</c> object into a JSON file located in a user's documents folder.
+        /// </summary>
+        /// <param name="character">A Character object.</param>
         public static void Save(Character character)
         {
             string fileName = $"{character.Name}.json";
@@ -22,7 +25,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
             File.WriteAllText($"{savePath}{fileName}", json);
         }
 
-        //Method will attempt to load .JSON file from documents
+        /// <summary>
+        /// Loads a character's JSON file in a user's documents folder. Finds the character by their name.
+        /// </summary>
+        /// <param name="characterName">A Character's name that will be used to search for the JSON.</param>
+        /// <returns>A <c>Character</c> object. Returns <c>null</c> if no character is found.</returns>
         public static Character? Load(string characterName)
         {
             string fileName = $"{characterName}.json";

@@ -10,6 +10,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         private int currentHPPoints, currentMPPoints, currentSTRPoints, currentMAGPoints, currentDEXPoints, currentDEFPoints, currentSPRPoints;
         private Character? character;
 
+        /// <summary>
+        /// Initializes a <c>CreateCharacter</c> instance.
+        /// </summary>
         public CreateCharacter()
         {
             InitializeComponent();
@@ -22,17 +25,25 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             this.currentHPPoints = 0;
         }
 
+        /// <summary>
+        /// Closes the current form.
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        /// <summary>
+        /// Processes a new character for saving.
+        /// </summary>
         private void btnCreateCharacter_Click(object sender, EventArgs e)
         {
             ValidateCharacter();
         }
 
-        //Method will verify that all inputs are entered
+        /// <summary>
+        /// Verifies that all inputs are valid for character creation.
+        /// </summary>
         private void ValidateCharacter()
         {
             string characterName;
