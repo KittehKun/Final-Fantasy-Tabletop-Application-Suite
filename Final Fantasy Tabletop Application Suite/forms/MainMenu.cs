@@ -1,4 +1,5 @@
 using Final_Fantasy_Tabletop_Application_Suite.forms;
+using Final_Fantasy_Tabletop_Application_Suite.forms.calculators;
 using System.Diagnostics;
 
 namespace Final_Fantasy_Tabletop_Application_Suite
@@ -85,6 +86,24 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             this.Visible = false;
             _ = new DeleteCharacter().ShowDialog();
             this.Visible = true;
+        }
+
+        /// <summary>
+        /// Opens a moveable form for attack calculations.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
+        private void btnAttackCalculator_Click(object sender, EventArgs e)
+        {
+            //This event handler will not hide the main form.
+            Attack atkCalc = new Attack();
+            if ((Application.OpenForms["Attack"] as Attack) != null)
+            {
+                Debug.WriteLine("Attack Calculator form is already open.");
+                return;
+            }
+
+            atkCalc.Show();
         }
     }
 }

@@ -197,6 +197,7 @@
             this.btnAttackCalculator.TabIndex = 3;
             this.btnAttackCalculator.Text = "Attack Calculator";
             this.btnAttackCalculator.UseVisualStyleBackColor = true;
+            this.btnAttackCalculator.Click += new System.EventHandler(this.btnAttackCalculator_Click);
             // 
             // MainMenu
             // 
