@@ -65,7 +65,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
         public static List<Skills> LoadSkills(string characterClass)
         {
             List<Skills> skills = new List<Skills>();
-            string path = $"src/data/character/skills/{characterClass}Skills.xml";
+            string path = $"src/data/character/skills/{characterClass.ToLower()}/{characterClass}Skills.xml";
             try
             {
                 XmlDocument document = new();

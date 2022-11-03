@@ -1,33 +1,27 @@
-﻿namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
+﻿using System.Text.Json.Serialization;
+
+namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 {
     internal class Skills
     {
-        //Properties
-        private int level;
-        private string name;
-        private string type;
-        private string potency;
-        private string cooldown;
-        private string target;
-        private string description;
-
-        public Skills(int level, string name, string type, string potency, string cooldown, string target, string description)
+        [JsonConstructor]
+        public Skills(int Level, string Name, string Type, string Potency, string Cooldown, string Target, string Description)
         {
-            this.level = level;
-            this.name = name;
-            this.type = type;
-            this.potency = potency;
-            this.cooldown = cooldown;
-            this.target = target;
-            this.description = description;
+            this.Level = Level;
+            this.Name = Name;
+            this.Type = Type;
+            this.Potency = Potency;
+            this.Cooldown = Cooldown;
+            this.Target = Target;
+            this.Description = Description;
         }
 
-        public int Level { get => level; set => level = value; }
-        public string Name { get => name; set => name = value; }
-        public string Type { get => type; set => type = value; }
-        public string Potency { get => potency; set => potency = value; }
-        public string Cooldown { get => cooldown; set => cooldown = value; }
-        public string Target { get => target; set => target = value; }
-        public string Description { get => description; set => description = value; }
+        public int Level { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Potency { get; set; }
+        public string Cooldown { get; set; }
+        public string Target { get; set; }
+        public string Description { get; set; }
     }
 }

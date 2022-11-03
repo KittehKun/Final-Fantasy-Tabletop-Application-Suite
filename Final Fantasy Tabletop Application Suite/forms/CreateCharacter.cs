@@ -91,6 +91,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             stats[5] = int.Parse(statDEF.Text);
             stats[6] = int.Parse(statSPR.Text);
 
+
             int levelPoints = int.Parse(statRemaining.Text);
 
             this.character = new Character(characterName, characterRace, characterPrimaryClass, levelPoints, stats); //Creates a Character
@@ -99,16 +100,19 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
             //The following methods are class specific
             List<Skills> skills = ProcessSkills(characterPrimaryClass);
-            foreach (Skills skill in skills)
-            {
-                Debug.WriteLine(skill.Name); //Expected Output: Up to level 30 skills
-            }
+
+            this.character.SetSkills(skills);
 
             CharacterUtilities.Save(this.character);
 
             Close();
         }
 
+        /// <summary>
+        /// Uses CharacterUtilities to fill a newly created character with abilities.
+        /// </summary>
+        /// <param name="characterClass">A character's primary class.</param>
+        /// <returns>A List of Skills objects.</returns>
         private List<Skills> ProcessSkills(string characterClass)
         {
             List<Skills> skills = new List<Skills>();

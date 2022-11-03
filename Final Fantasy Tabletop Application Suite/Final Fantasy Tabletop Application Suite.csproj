@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="src\data\character\skills\ArcherSkills.xml">
+    <None Update="src\data\character\skills\archer\ArcherSkills.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

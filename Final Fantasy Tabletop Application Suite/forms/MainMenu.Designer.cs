@@ -135,6 +135,7 @@
             this.btnDeleteCharacter.TabIndex = 2;
             this.btnDeleteCharacter.Text = "Delete Character";
             this.btnDeleteCharacter.UseVisualStyleBackColor = true;
+            this.btnDeleteCharacter.Click += new System.EventHandler(this.btnDeleteCharacter_Click);
             // 
             // btnLoadCharacter
             // 

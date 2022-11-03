@@ -1,3 +1,4 @@
+using Final_Fantasy_Tabletop_Application_Suite.forms;
 using System.Diagnostics;
 
 namespace Final_Fantasy_Tabletop_Application_Suite
@@ -71,6 +72,19 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         private void btnRegularCalculator_Click(object sender, EventArgs e)
         {
             Process.Start("Calc"); //Starts Windows Calculator
+        }
+
+        /// <summary>
+        /// Opens a form asking which character to delete.
+        /// </summary>
+        /// <param name="sender">The object that fired current event.</param>
+        /// <param name="e">The current event.</param>
+        private void btnDeleteCharacter_Click(object sender, EventArgs e)
+        {
+            //Open DeleteCharacter.cs form
+            this.Visible = false;
+            _ = new DeleteCharacter().ShowDialog();
+            this.Visible = true;
         }
     }
 }
