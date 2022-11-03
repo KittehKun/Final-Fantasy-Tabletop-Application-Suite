@@ -58,5 +58,27 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms
                 MessageBox.Show($"ERROR: {error.Message}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        /// <summary>
+        /// Asks for confirmation before deleting a character. Creates a MessageBox.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e"></param>
+        private void dataGridCharacters_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var characterRow = dataGridCharacters.Rows[e.RowIndex];
+            string? characterName = characterRow.Cells[0].Value.ToString(); //Expected Output: Character Name
+
+            DialogResult result = MessageBox.Show($"Are you sure you want to delete {characterName}?", "WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result != DialogResult.No)
+            {
+                characterRow.Visible = false;
+                CharacterUtilities.DeleteCharacter(characterName!);
+                return;
+            }
+
+            return;
+        }
     }
 }

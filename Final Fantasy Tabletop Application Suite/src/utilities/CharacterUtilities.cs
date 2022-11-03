@@ -58,6 +58,25 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
         }
 
         /// <summary>
+        /// Deletes a character given a character's name. Parameter should come from DeleteCharacter.cs form.
+        /// </summary>
+        /// <param name="characterName">A character's name. Used for matching a character's file.</param>
+        public static void DeleteCharacter(string characterName)
+        {
+            string fileName = $"{characterName}.json";
+            try
+            {
+                File.Delete($"{savePath}{fileName}");
+                MessageBox.Show($"{characterName} has been deleted.", "INFORMATION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception error)
+            {
+                Debug.WriteLine(error.Message);
+                MessageBox.Show($"ERROR: {error.Message}", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
         /// Loads character's skills from the skills database.
         /// </summary>
         /// <param name="characterClass">A Character's class. Used for finding what skills to load.</param>
@@ -93,9 +112,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
             {
                 MessageBox.Show($"ERROR: {error.StackTrace}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(404);
+                return null;
             }
-
-            return null; //Placeholder
         }
     }
 }
