@@ -59,6 +59,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Loads all character JSON files found in a user's documents folder.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e"></param>
         private void dataGridCharacters_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var characterRow = dataGridCharacters.Rows[e.RowIndex];
