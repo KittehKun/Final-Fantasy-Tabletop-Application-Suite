@@ -1,12 +1,11 @@
-﻿using System.Diagnostics;
-
-namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
+﻿namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
 {
     public partial class Attack : Form
     {
         private readonly Random _d20;
         private int _potency, _diceAmount, _diceSides, _diceResult, _finalStat;
         private double _total;
+        private bool _isMultiRoll;
 
         public Attack()
         {
@@ -40,6 +39,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
                 txtDiceAmount.Text = "";
                 txtDiceSides.Text = "";
                 txtResult.Text = "";
+                ResetFields();
             }
 
         }
@@ -55,12 +55,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
             {
                 _total = (double)_potency / 10 * _diceResult * _finalStat / 100; //Formula follows order of operations - no parenthesis needed
                 txtTotal.Text = String.Format("{0:0.00}", _total); //"D2" signfies 2 decimal points
-                _diceAmount = 0;
-                _diceSides = 0;
-                _diceResult = 0;
-                _potency = 0;
-                _finalStat = 0;
-                _total = 0;
+                ResetFields();
                 btnCalculate.Enabled = false;
                 btnRoll.Enabled = true;
             }
@@ -93,14 +88,25 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
 
                 //Roll dice depending on the number of dice given
                 List<int> rolls = new(_diceAmount);
+                if (_diceAmount > 1)
+                {
+                    _isMultiRoll = true;
+                }
+
                 do
                 {
                     rolls.Add(RollDice(_diceSides));
                     _diceAmount--; //Subtract the die that was rolled
                 } while (_diceAmount != 0); //Check if there are any dice left to roll
-                Debug.WriteLine("There are no more dice left to roll.");
 
                 btnRoll.Enabled = false;
+
+                //Show MessageBox if it was a multi-dice roll
+                if (_isMultiRoll)
+                {
+                    string multiRoll = String.Join(", ", rolls);
+                    MessageBox.Show($"[{multiRoll}]", "Multi-Roll Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
                 //Add up the running total of all dice rolls
                 foreach (int roll in rolls)
@@ -108,6 +114,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
                     _diceResult += roll;
                 }
 
+                _isMultiRoll = false; //Reset flag
                 txtResult.Text = _diceResult.ToString();
             }
             catch (FormatException)
@@ -155,6 +162,19 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms.calculators
 
             //Return true if all fields are valid
             return true;
+        }
+
+        /// <summary>
+        /// Resets all current variable fields back to zero.
+        /// </summary>
+        private void ResetFields()
+        {
+            _diceAmount = 0;
+            _diceSides = 0;
+            _diceResult = 0;
+            _potency = 0;
+            _finalStat = 0;
+            _total = 0;
         }
     }
 }
