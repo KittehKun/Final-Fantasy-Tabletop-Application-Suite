@@ -76,21 +76,21 @@
             // toolbarImport
             // 
             this.toolbarImport.Name = "toolbarImport";
-            this.toolbarImport.Size = new System.Drawing.Size(119, 22);
+            this.toolbarImport.Size = new System.Drawing.Size(180, 22);
             this.toolbarImport.Text = "Import...";
             this.toolbarImport.ToolTipText = "Import a character.";
             // 
             // toolbarExport
             // 
             this.toolbarExport.Name = "toolbarExport";
-            this.toolbarExport.Size = new System.Drawing.Size(119, 22);
+            this.toolbarExport.Size = new System.Drawing.Size(180, 22);
             this.toolbarExport.Text = "Export...";
             this.toolbarExport.ToolTipText = "Export a character.";
             // 
             // toolbarExit
             // 
             this.toolbarExit.Name = "toolbarExit";
-            this.toolbarExit.Size = new System.Drawing.Size(119, 22);
+            this.toolbarExit.Size = new System.Drawing.Size(180, 22);
             this.toolbarExit.Text = "Exit";
             this.toolbarExit.ToolTipText = "Exit the application.";
             this.toolbarExit.Click += new System.EventHandler(this.toolbarExit_Click);
@@ -208,6 +208,7 @@
             this.Controls.Add(this.groupBoxCharTools);
             this.Controls.Add(this.toolbarMainMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main Menu";

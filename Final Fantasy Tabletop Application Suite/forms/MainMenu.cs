@@ -100,10 +100,12 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             if ((Application.OpenForms["Attack"] as Attack) != null)
             {
                 Debug.WriteLine("Attack Calculator form is already open.");
+                Application.OpenForms["Attack"].Activate(); //Focuses form if already open
                 return;
             }
 
             atkCalc.Show();
         }
+
     }
 }
