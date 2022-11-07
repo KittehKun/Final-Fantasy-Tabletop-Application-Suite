@@ -105,7 +105,7 @@
                 if (_isMultiRoll)
                 {
                     string multiRoll = String.Join(", ", rolls);
-                    MessageBox.Show($"[{multiRoll}]", "Multi-Roll Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"[ {multiRoll} ]", "Multi-Roll Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 //Add up the running total of all dice rolls
