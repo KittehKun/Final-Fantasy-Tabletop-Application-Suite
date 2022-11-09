@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="32" name="Gleaming Arrow" type="Light" potency="150+50" cooldown="0/5" target="1" description="Light damage with consecutive increase"></Skill>
+	<Skill level="35" name="Gale Arrow" type="Wind" potency="150+50" cooldown="0/5" target="1" description="Wind damage with consecutive increase"></Skill>
+	<Skill level="35" name="Elven Round" type="Sabotage" potency="30%" cooldown="5" target="1" description="Reduce enemy range DEF for 3 turns"></Skill>
+	<Skill level="38" name="Ice Arrow" type="Ice" potency="200/30%" cooldown="5" target="1" description="Ice damage with chance of stop"></Skill>
+	<Skill level="41" name="Nature" type="Synergy" potency="30%" cooldown="3" target="Self" description="Raise SPR for 2 turns"></Skill>
+	<Skill level="41" name="Black Arrow" type="Dark" potency="-" cooldown="6" target="1" description="Deal true damage equal to DEX"></Skill>
+	<Skill level="41" name="Poison Arrow" type="Sabotage" potency="150/30%" cooldown="2" target="1" description="Coat an arrow with poison and release"></Skill>
+	<Skill level="45" name="Aureole Ray" type="Wind Light" potency="300" cooldown="7" target="AoE" description="Unleash a storm of arrows on your foes"></Skill>
+	<Skill level="45" name="Spear Head" type="Ranged" potency="200/40%" cooldown="5" target="1" description="Reduce targets DEF by 40%"></Skill>
+	<Skill level="48" name="Critical Point" type="Ranged" potency="100/50%" cooldown="4" target="1" description="Chance of afflicting death on target"></Skill>
+	<Skill level="50" name="Escape" type="Heal" potency="-" cooldown="5" target="Self" description="Cleanse yourself of DoT effects"></Skill>
+	<Skill level="52" name="Conflagrate Shaft" type="Fire" potency="100" cooldown="8" target="AoE" description="Douse your arrow in napalm salve"></Skill>
+	<Skill level="52" name="Empyreal Arrow" type="Ranged" potency="320" cooldown="5" target="1" description="Fire a concentrated power show"></Skill>
+	<Skill level="56" name="Cloudsplitter" type="Ranged" potency="320/25%" cooldown="5" target="1" description="Fire a harpoon with guaranteed DEF -25%"></Skill>
+	<Skill level="60" name="Arrow Hurricane" type="Ranged" potency="300" cooldown="8" target="AoE" description="Let fly a hurricane of arrows"></Skill>
+	<Skill level="60" name="MASTERY - Wrymslayer" type="Ranged" potency="1200" cooldown="X" target="1" description="Unleash an earth-splitting harpoon"></Skill>
+	<Skill level="60" name="MASTERY - Icarus Shot" type="Light" potency="600" cooldown="9" target="1" description="Release the heavens on your foe"></Skill>
+</SkillsList>

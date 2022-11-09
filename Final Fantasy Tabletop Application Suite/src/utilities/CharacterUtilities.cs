@@ -116,6 +116,12 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
             }
         }
 
+        /// <summary>
+        /// Sets the Character's ascension skills when a Character reaches that stage in development. Method should be called from the CharacterSheet form.
+        /// </summary>
+        /// <param name="characterClass">The character's primary class.</param>
+        /// <param name="ascensionPath">The character's chosen ascension path. Chosen from the Character sheet.</param>
+        /// <returns></returns>
         public static List<AscensionSkills> LoadAscensionSkills(string characterClass, string ascensionPath)
         {
             List<AscensionSkills> ascensionSkills = new List<AscensionSkills>();
@@ -131,15 +137,14 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
                 {
                     if (node.Attributes != null) //Check if there are attributes in child node
                     {
-                        string ascensionClass = node.Attributes[0].Value;
-                        int level = int.Parse(node.Attributes[1].Value);
-                        string name = node.Attributes[2].Value;
-                        string type = node.Attributes[3].Value;
-                        string potency = node.Attributes[4].Value;
-                        string cooldown = node.Attributes[5].Value;
-                        string target = node.Attributes[6].Value;
-                        string description = node.Attributes[7].Value;
-                        ascensionSkills.Add(new AscensionSkills());
+                        int level = int.Parse(node.Attributes[0].Value);
+                        string name = node.Attributes[1].Value;
+                        string type = node.Attributes[2].Value;
+                        string potency = node.Attributes[3].Value;
+                        string cooldown = node.Attributes[4].Value;
+                        string target = node.Attributes[5].Value;
+                        string description = node.Attributes[6].Value;
+                        ascensionSkills.Add(new AscensionSkills(level, name, type, potency, cooldown, target, description));
                     }
                 }
 

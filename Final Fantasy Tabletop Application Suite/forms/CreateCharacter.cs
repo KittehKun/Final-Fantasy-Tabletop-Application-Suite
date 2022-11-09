@@ -116,10 +116,13 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         private List<Skills> ProcessSkills(string characterClass)
         {
             List<Skills> skills = new List<Skills>();
+            List<AscensionSkills> ascensionSkills = new List<AscensionSkills>();
             switch (characterClass)
             {
                 case "Archer":
                     skills = CharacterUtilities.LoadSkills(characterClass);
+                    ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Ranger"); //FOR TESTING PURPOSES
+                    this.character.SetAscensionSkills(ascensionSkills);
                     break;
                 default:
                     Debug.WriteLine("KittehKun your code is broken. Fix it~");

@@ -69,5 +69,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
         {
             this.Skills = skills;
         }
+
+        public void SetAscensionSkills(List<AscensionSkills> ascensionSkills)
+        {
+            this.AscensionSkills = ascensionSkills;
+        }
     }
 }

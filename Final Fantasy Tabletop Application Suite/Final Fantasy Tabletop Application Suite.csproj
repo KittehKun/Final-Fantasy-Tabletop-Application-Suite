@@ -17,6 +17,9 @@
     <None Update="src\data\character\skills\archer\ArcherSkills.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="src\data\character\skills\archer\RangerSkills.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
