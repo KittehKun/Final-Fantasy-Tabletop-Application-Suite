@@ -5,10 +5,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 {
     internal class Character : ICharacter
     {
-        //Fields
-        private List<string> _inventory;
-
-        //Interface
+        //Interface & Properties
         public string Name { get; private set; }
 
         public int Level { get; set; } //Added Property not from Interface
@@ -25,9 +22,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
 
         public List<Skills>? Skills { get; private set; } //Abilities classified here as skills
 
+        public List<AscensionSkills>? AscensionSkills { get; private set; } //Added Property not from Interface
+
         public string? CharacterStory { get; set; }
 
-        public List<string> Inventory { get => _inventory; }
+        public List<string> Inventory { get; set; }
 
         //Constructor - Creates Character Object
         /// <summary>
@@ -47,11 +46,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.LevelPoints = levelpoints;
             this.CharacterStats = new int[7]; // | HP | MP | STR | MAG | DEF | DEX | SPR |
             this.CharacterStats = stats;
-            this._inventory = new List<string>();
+            this.Inventory = new List<string>();
         }
 
         [JsonConstructor] //Constructor arguments MUST match the properties of the class otherwise an unhandled exception will occur
-        public Character(string Name, int Level, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<Skills> Skills, string CharacterStory, List<string> inventory)
+        public Character(string Name, int Level, string Race, string @Class, int LevelPoints, int[] CharacterStats, List<string> Spells, List<Skills> Skills, List<AscensionSkills> AscensionSkills, string CharacterStory, List<string> Inventory)
         {
             this.Name = Name;
             this.Level = Level;
@@ -61,33 +60,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.CharacterStats = CharacterStats;
             this.Spells = Spells;
             this.Skills = Skills;
+            this.AscensionSkills = AscensionSkills;
             this.CharacterStory = CharacterStory;
-            this._inventory = inventory;
-        }
-
-        //Methods
-        /// <summary>
-        /// Gets a Character's inventory.
-        /// </summary>
-        /// <returns>A List of strings.</returns>
-        public List<string> GetInventory()
-        {
-            return this._inventory;
-        }
-
-        /// <summary>
-        /// Adds an item to a Character's inventory. Prompts for confirmation.
-        /// </summary>
-        /// <param name="item">The item to be added.</param>
-        public void AddToInventory(string item)
-        {
-            DialogResult result = MessageBox.Show($"Add {item} to inventory?", "INFO", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                this._inventory.Add(item);
-                return;
-            }
-            return;
+            this.Inventory = Inventory;
         }
 
         public void SetSkills(List<Skills> skills)

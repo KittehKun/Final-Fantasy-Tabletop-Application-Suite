@@ -115,5 +115,42 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
                 return null;
             }
         }
+
+        public static List<AscensionSkills> LoadAscensionSkills(string characterClass, string ascensionPath)
+        {
+            List<AscensionSkills> ascensionSkills = new List<AscensionSkills>();
+            string path = $"src/data/character/skills/{characterClass.ToLower()}/{ascensionPath}Skills.xml";
+
+            try
+            {
+                XmlDocument document = new();
+                document.Load(path);
+                Debug.WriteLine($"{ascensionPath}Skills.xml loaded!");
+
+                foreach (XmlNode node in document.DocumentElement!.ChildNodes)
+                {
+                    if (node.Attributes != null) //Check if there are attributes in child node
+                    {
+                        string ascensionClass = node.Attributes[0].Value;
+                        int level = int.Parse(node.Attributes[1].Value);
+                        string name = node.Attributes[2].Value;
+                        string type = node.Attributes[3].Value;
+                        string potency = node.Attributes[4].Value;
+                        string cooldown = node.Attributes[5].Value;
+                        string target = node.Attributes[6].Value;
+                        string description = node.Attributes[7].Value;
+                        ascensionSkills.Add(new AscensionSkills());
+                    }
+                }
+
+                return ascensionSkills;
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"ERROR: {error.Message}", "Error Encountered", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(404);
+                return null;
+            }
+        }
     }
 }
