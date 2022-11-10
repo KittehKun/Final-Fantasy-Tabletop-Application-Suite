@@ -8,6 +8,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite
     {
         private List<Character> characters;
 
+        /// <summary>
+        /// Creates a new Form instance and loads the LoadCharacter form. This constructor is needed for building the form.
+        /// </summary>
         public LoadCharacter()
         {
             InitializeComponent();
@@ -17,7 +20,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
         //Method will populate form with all the Characters found in the Documents folder
         /// <summary>
-        /// Populates DataGridView with all characters found in the user's documents.
+        /// Populates DataGridView with all characters found in the user's documents. This method is used for loading all the characters from the documents folder.
         /// </summary>
         private void SelectCharacter()
         {
@@ -60,7 +63,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Loads all character JSON files found in a user's documents folder.
+        /// Loads all character JSON files found in a user's documents folder. This method is used for selecting a loaded character from the grid.
         /// </summary>
         /// <param name="sender">The object that fired the event.</param>
         /// <param name="e"></param>

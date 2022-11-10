@@ -7,6 +7,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite
     public partial class MainMenu : Form
     {
         private readonly string savePath;
+        /// <summary>
+        /// Constructor used to open a new Form. Used to build the GUI.
+        /// </summary>
         public MainMenu()
         {
             InitializeComponent();
@@ -19,7 +22,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Exits the application.
+        /// Exits the application when clicking the toolbar "Exit" option.
         /// </summary>
         private void toolbarExit_Click(object sender, EventArgs e)
         {
@@ -89,7 +92,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Opens a moveable form for attack calculations.
+        /// Opens a form for attack calculations.
         /// </summary>
         /// <param name="sender">The object that fired current event.</param>
         /// <param name="e">The current event.</param>
@@ -97,7 +100,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         {
             //This event handler will not hide the main form.
             Attack atkCalc = new Attack();
-            if ((Application.OpenForms["Attack"] as Attack) != null)
+            if ((Application.OpenForms["Attack"] as Attack) != null) //Checks if form is already open
             {
                 Debug.WriteLine("Attack Calculator form is already open.");
                 Application.OpenForms["Attack"].Activate(); //Focuses form if already open

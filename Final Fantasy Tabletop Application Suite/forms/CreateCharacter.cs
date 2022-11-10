@@ -11,7 +11,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         private Character? character;
 
         /// <summary>
-        /// Initializes a <c>CreateCharacter</c> instance.
+        /// Initializes a <c>CreateCharacter</c> instance. This is used for building the GUI.
         /// </summary>
         public CreateCharacter()
         {
@@ -34,7 +34,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Processes a new character for saving.
+        /// Processes a new character for saving. The form will be verified to make sure all fields were filled in correctly.
         /// </summary>
         private void btnCreateCharacter_Click(object sender, EventArgs e)
         {
@@ -42,7 +42,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Verifies that all inputs are valid for character creation.
+        /// Verifies that all inputs are valid for character creation. This method is used to scan the form to make sure there are no errors. If any errors are found, the method returns and a MessageBox is created.
         /// </summary>
         private void ValidateCharacter()
         {
@@ -109,7 +109,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         }
 
         /// <summary>
-        /// Uses CharacterUtilities to fill a newly created character with abilities.
+        /// Uses CharacterUtilities to fill a newly created character with abilities. Creates List objects that will be used to pass onto the utilities class.
         /// </summary>
         /// <param name="characterClass">A character's primary class.</param>
         /// <returns>A List of Skills objects.</returns>
@@ -122,7 +122,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
                 case "Archer":
                     skills = CharacterUtilities.LoadSkills(characterClass);
                     ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Ranger"); //FOR TESTING PURPOSES
-                    this.character.SetAscensionSkills(ascensionSkills);
+                    this.character!.SetAscensionSkills(ascensionSkills);
                     break;
                 default:
                     Debug.WriteLine("KittehKun your code is broken. Fix it~");
@@ -132,6 +132,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             return skills;
         }
 
+        /// <summary>
+        /// Increases the Character's HP stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnHPPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -147,6 +152,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's HP stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnHPMinus_Click(object sender, EventArgs e)
         {
             if (this.currentHPPoints > 0)
@@ -162,6 +172,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's MP stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnMPMinus_Click(object sender, EventArgs e)
         {
             if (this.currentMPPoints > 0)
@@ -177,6 +192,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's MP stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnMPPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -192,6 +212,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's MAG stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnMAGPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -207,6 +232,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's DEX stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnDEXPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -222,6 +252,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's DEX stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnDEXMinus_Click(object sender, EventArgs e)
         {
             if (this.currentDEXPoints > 0)
@@ -237,6 +272,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's DEF stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnDEFPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -252,6 +292,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's DEF stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnDEFMinus_Click(object sender, EventArgs e)
         {
             if (this.currentDEFPoints > 0)
@@ -267,6 +312,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's SPR stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnSPRPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -282,6 +332,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's SPR stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnSPRMinus_Click(object sender, EventArgs e)
         {
             if (this.currentSPRPoints > 0)
@@ -297,6 +352,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's MAG stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnMAGMinus_Click(object sender, EventArgs e)
         {
             if (this.currentSTRPoints > 0)
@@ -312,6 +372,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Increases the Character's STR stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnSTRPlus_Click(object sender, EventArgs e)
         {
             if (this.statPoints > 0)
@@ -327,6 +392,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             }
         }
 
+        /// <summary>
+        /// Decreases the Character's STR stat by one.
+        /// </summary>
+        /// <param name="sender">The object that fired the event.</param>
+        /// <param name="e">The event's arguments.</param>
         private void btnSTRMinus_Click(object sender, EventArgs e)
         {
             if (this.currentSTRPoints > 0)

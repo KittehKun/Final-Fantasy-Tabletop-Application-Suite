@@ -65,11 +65,19 @@ namespace Final_Fantasy_Tabletop_Application_Suite.src.classes
             this.Inventory = Inventory;
         }
 
+        /// <summary>
+        /// Sets the list of Skills of a Character.
+        /// </summary>
+        /// <param name="skills">The skills of a character.</param>
         public void SetSkills(List<Skills> skills)
         {
             this.Skills = skills;
         }
 
+        /// <summary>
+        /// Sets the ascension skills of a Character. Should be called from the CharacterSheet class on level up.
+        /// </summary>
+        /// <param name="ascensionSkills">The ascension skills of a character.</param>
         public void SetAscensionSkills(List<AscensionSkills> ascensionSkills)
         {
             this.AscensionSkills = ascensionSkills;

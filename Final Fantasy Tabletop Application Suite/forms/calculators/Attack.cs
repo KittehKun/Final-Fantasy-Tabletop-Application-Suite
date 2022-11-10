@@ -7,6 +7,9 @@
         private double _total;
         private bool _isMultiRoll;
 
+        /// <summary>
+        /// Initializes a new instance of the Attack form. This constructor is used to build the GUI.
+        /// </summary>
         public Attack()
         {
             InitializeComponent();
@@ -48,7 +51,7 @@
         /// Calculates the attack based on potency, the roll, and final stat.
         /// </summary>
         /// <param name="sender">The object that fired the event.</param>
-        /// <param name="e"></param>
+        /// <param name="e">The event's arguments.</param>
         private void btnCalculate_Click(object sender, EventArgs e)
         {
             if (ValidateFields())
@@ -62,7 +65,7 @@
         }
 
         /// <summary>
-        /// Rolls a D20 dice and populates the text field.
+        /// Rolls a D20 dice and populates the text field. Supports multi-dice and rolls and will display a dialog showing each individual roll before updating the total of all rolls.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -77,7 +80,7 @@
 
             try
             {
-                _diceSides = int.Parse(txtDiceSides.Text) + 1; //Upper bound
+                _diceSides = int.Parse(txtDiceSides.Text) + 1; //Max Value
                 _diceAmount = int.Parse(txtDiceAmount.Text); //Amount of dice being rolled
 
                 if (_diceSides == 1)
@@ -126,19 +129,20 @@
         }
 
         /// <summary>
-        /// Rolls a dice given the number of sides.
+        /// Rolls a dice given the number of sides. This method uses the Random object filling in the minimum and maximum value.
         /// </summary>
-        /// <param name="upperBound">The number of sides the dice will have.</param>
-        /// <returns>A random <c>int</c> from 1 to the <c>upperBound</c>. Upper bound is inclusive in calculation.</returns>
-        private int RollDice(int upperBound)
+        /// <param name="maxValue">The number of sides the dice will have.</param>
+        /// <returns>A random <c>int</c> from 1 to the <c>upperBound</c>. Max value is inclusive in calculation.</returns>
+        private int RollDice(int maxValue)
         {
             btnCalculate.Enabled = true;
-            return _d20.Next(1, upperBound);
+            return _d20.Next(1, maxValue);
         }
 
         /// <summary>
-        /// Checks current form if all TextBoxes are filled properly.
+        /// Checks current form if all TextBoxes are filled properly. If any errors are found, this method will return false.
         /// </summary>
+        /// <returns><c>true</c> only if all fields were filled in correctly. Otherwise, returns <c>false</c>.</returns>
         private bool ValidateFields()
         {
             //Set _potency variable from form
@@ -165,7 +169,7 @@
         }
 
         /// <summary>
-        /// Resets all current variable fields back to zero.
+        /// Resets all current variable fields back to zero. This method is used after calculation to reset the form.
         /// </summary>
         private void ResetFields()
         {

@@ -8,6 +8,9 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms
     {
         private List<Character> characters;
 
+        /// <summary>
+        /// Constructor used for building the DeleteCharacter GUI.
+        /// </summary>
         public DeleteCharacter()
         {
             InitializeComponent();
@@ -60,10 +63,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite.forms
         }
 
         /// <summary>
-        /// Asks for confirmation before deleting a character. Creates a MessageBox.
+        /// Creates a MessageBox and asks for confirmation before deleting a character. 
         /// </summary>
         /// <param name="sender">The object that fired the event.</param>
-        /// <param name="e"></param>
+        /// <param name="e">The object's event arguments.</param>
         private void dataGridCharacters_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             var characterRow = dataGridCharacters.Rows[e.RowIndex];
