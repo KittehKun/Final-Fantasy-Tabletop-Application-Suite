@@ -100,7 +100,6 @@ namespace Final_Fantasy_Tabletop_Application_Suite
 
             //The following methods are class specific
             List<Skills> skills = ProcessSkills(characterPrimaryClass);
-
             this.character.SetSkills(skills);
 
             CharacterUtilities.Save(this.character);

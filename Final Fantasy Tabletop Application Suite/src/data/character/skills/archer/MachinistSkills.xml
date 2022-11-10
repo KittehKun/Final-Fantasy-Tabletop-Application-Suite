@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="30" name="Hot Shot" type="Ranged" potency="300" cooldown="4" target="1" description="Fire a gas filled round"></Skill>
+	<Skill level="33" name="Vaporiser" type="Fire" potency="250/10%" cooldown="4" target="1" description="Fire an anti-magic heat round"></Skill>
+	<Skill level="33" name="Quick Round" type="Ranged" potency="300" cooldown="-" target="1" description="Follow up to Straight Shot"></Skill>
+	<Skill level="38" name="Heat Blast" type="Fire" potency="210" cooldown="-" target="1" description="Follow up to Heavy Shot"></Skill>
+	<Skill level="40" name="Hyperdrive" type="Synergy" potency="20%" cooldown="8" target="Self" description="Increase potency for 5 turns"></Skill>
+	<Skill level="40" name="Sentry Drone" type="Summon" potency="130" cooldown="10" target="AoE" description="Summons a self-acting turret for 5 turns"></Skill>
+	<Skill level="43" name="Sentry Overload" type="Thunder" potency="400" cooldown="-" target="1" description="Can only activate during the 5th turn of a Sentry Drone summon"></Skill>
+	<Skill level="46" name="Wildfire" type="Sabotage" potency="200" cooldown="6" target="1" description="If a marked enemy is hit with fire - the target explodes"></Skill>
+	<Skill level="46" name="Ricochet" type="Ranged" potency="200" cooldown="-" target="AoE" description="Activate only during Hyperdrive"></Skill>
+	<Skill level="50" name="Tactician" type="Synergy" potency="10%" cooldown="10" target="AoE" description="Reduce party damage by 10% for 3 turns"></Skill>
+	<Skill level="50" name="Barrel Stabilizer" type="Synergy" potency="-" cooldown="10" target="Self" description="Reduce ranged cooldowns by 2 turns"></Skill>
+	<Skill level="53" name="Flamethrower" type="Fire" potency="100/20" cooldown="-" target="AoE" description="Increase skill potency by 20 each consecutive turn"></Skill>
+	<Skill level="53" name="Bioblaster" type="Dark" potency="80/70%" cooldown="10" target="AoE" description="Spray a cloud of poison onto your enemies"></Skill>
+	<Skill level="57" name="Air Anchor" type="Ranged" potency="600" cooldown="X" target="1" description="Unleash a flurry of harpoons"></Skill>
+	<Skill level="57" name="Heated Clean Shot" type="Ranged" potency="380" cooldown="-" target="1" description="Follow up to Hot Shot"></Skill>
+	<Skill level="60" name="Machina Queen" type="Summon" potency="230" cooldown="10" target="AoE" description="Takes place of Sentry Drone"></Skill>
+	<Skill level="60" name="Queen Overdrive" type="Thunder" potency="500" cooldown="-" target="AoE" description="Takes place of Sentry Overload"></Skill>
+	<Skill level="60" name="MASTERY - EMP Burst" type="Sabotage" potency="-" cooldown="X" target="1" description="Disable target Magitek"></Skill>
+	<Skill level="60" name="Satellite Beam" type="Thunder" potency="700" cooldown="X" target="1" description="Unleash a focused aether laser"></Skill>
+</SkillsList>
