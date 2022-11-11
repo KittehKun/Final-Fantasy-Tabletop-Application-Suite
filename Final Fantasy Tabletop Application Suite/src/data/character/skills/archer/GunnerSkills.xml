@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="30" name="Fireshot" type="Fire" potency="190" cooldown="2" target="1" description="Fire a flaming round"></Skill>
+	<Skill level="33" name="Boltshot" type="Thunder" potency="210" cooldown="2" target="1" description="Fire a statically charged round"></Skill>
+	<Skill level="33" name="Blazing Shot" type="Fire" potency="280" cooldown="-" target="1" description="Follow up to Fireshot"></Skill>
+	<Skill level="38" name="Iceshot" type="Ice" potency="120/10%" cooldown="-" target="1" description="Fire a frozen round, chance to Stop 1 turn"></Skill>
+	<Skill level="40" name="Grapple Kick" type="Physical" potency="240" cooldown="2" target="1" description="Grapple into your enemy and kick"></Skill>
+	<Skill level="40" name="Clawshot" type="Ranged" potency="250" cooldown="3" target="1" description="Throw one small enemy into another"></Skill>
+	<Skill level="43" name="Concentrate" type="Synergy" potency="-" cooldown="7" target="Self" description="Next Range or Physical damage type deals True damage"></Skill>
+	<Skill level="46" name="Strikingshot" type="Thunder" potency="300" cooldown="-" target="1" description="Follow up to Boltshot"></Skill>
+	<Skill level="46" name="Diamondshot" type="Ice" potency="190/20%" cooldown="-" target="1" description="Follow up to Iceshot"></Skill>
+	<Skill level="50" name="Morbolshot" type="Dark" potency="310" cooldown="4" target="1" description="Inflict enemy with 2 random ailments"></Skill>
+	<Skill level="50" name="Flashbang" type="Sabotage" potency="80%" cooldown="7" target="AoE" description="Inflict Blind for 1 turn to all enemies"></Skill>
+	<Skill level="53" name="One-Two Combo" type="Physical/Ranged" potency="300" cooldown="2" target="1" description="Combine a kick with a gunshot"></Skill>
+	<Skill level="53" name="Skeetshot" type="Ranged" potency="180" cooldown="3" target="1" description="Does double damage if target is flying"></Skill>
+	<Skill level="57" name="Gutshot" type="Ranged" potency="210" cooldown="3" target="1" description="Does double damage if following a Physical damage type"></Skill>
+	<Skill level="60" name="Buckshot" type="Close-Ranged" potency="400" cooldown="5" target="1" description="Fire a short-range slug"></Skill>
+	<Skill level="60" name="Spray and Pray" type="Ranged" potency="350/30%" cooldown="7" target="AoE" description="Fire a spray with a 30% chance of missing"></Skill>
+	<Skill level="60" name="MASTERY - Fanning" type="Ranged" potency="500" cooldown="X" target="1-3" description="Fire off three precision rounds"></Skill>
+	<Skill level="60" name="MASTERY - Pieing" type="Ranged" potency="300" cooldown="-" target="1" description="Can only be used if enemy is debilitated"></Skill>
+	<Skill level="60" name="MASTERY - Killshot" type="Ranged" potency="-" cooldown="10" target="1" description="Inflict Death on Sleeping/Stunned target"></Skill>
+</SkillsList>

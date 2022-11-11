@@ -5,6 +5,9 @@ using System.Xml;
 
 namespace Final_Fantasy_Tabletop_Application_Suite.src.utilities
 {
+    /// <summary>
+    /// This helper class is used to provide tools to load and save character data. The majority of methods in this helper class are for loading and saving files on the computer.
+    /// </summary>
     internal class CharacterUtilities
     {
         private static string savePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "Kitteh's Application Suite/Jared's Final Fantasy Tabletop RPG/characters/");

@@ -16,13 +16,10 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         public CreateCharacter()
         {
             InitializeComponent();
-            comboBoxRaces.SelectedItem = "Hume";
-            comboBoxClasses.SelectedItem = "Archer";
+            comboBoxRaces.SelectedItem = "Hume"; //Default value
+            comboBoxClasses.SelectedItem = "Archer"; //Default value
             this.statPoints = 18; //Default 18 stat points to allocate
             statRemaining.Text = this.statPoints.ToString();
-
-            //Stat Points
-            this.currentHPPoints = 0;
         }
 
         /// <summary>
@@ -120,7 +117,7 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             {
                 case "Archer":
                     skills = CharacterUtilities.LoadSkills(characterClass);
-                    ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Ranger"); //FOR TESTING PURPOSES
+                    ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Gunner"); //FOR TESTING PURPOSES
                     this.character!.SetAscensionSkills(ascensionSkills);
                     break;
                 default:
