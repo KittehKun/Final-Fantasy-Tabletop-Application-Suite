@@ -117,8 +117,13 @@ namespace Final_Fantasy_Tabletop_Application_Suite
             {
                 case "Archer":
                     skills = CharacterUtilities.LoadSkills(characterClass);
-                    ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Gunner"); //FOR TESTING PURPOSES
-                    this.character!.SetAscensionSkills(ascensionSkills);
+                    //ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Gunner"); //FOR TESTING PURPOSES
+                    //this.character!.SetAscensionSkills(ascensionSkills);
+                    break;
+                case "Marauder":
+                    skills = CharacterUtilities.LoadSkills(characterClass);
+                    //ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Paladin"); //FOR TESTING PURPOSES
+                    //this.character!.SetAscensionSkills(ascensionSkills);
                     break;
                 default:
                     Debug.WriteLine("KittehKun your code is broken. Fix it~");

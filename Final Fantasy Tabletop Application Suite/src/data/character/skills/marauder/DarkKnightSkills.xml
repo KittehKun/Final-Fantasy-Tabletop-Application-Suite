@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="30" name="Blood Weapon" type="Defensive" potency="-" cooldown="5" target="Self" description="3 turn stance - Heal for 1/4 of the damage you deal rounded up"></Skill>
+	<Skill level="32" name="Darkness" type="Dark" potency="150" cooldown="-" target="AoE" description="Unleash a wave of darkness spending 30% of HP"></Skill>
+	<Skill level="35" name="Drain Blade" type="Dark" potency="180" cooldown="-" target="1" description="Syphon your opponents' life - 30% of damage converted to HP"></Skill>
+	<Skill level="35" name="Shikkoku" type="Synergy" potency="20/50%" cooldown="5" target="Self" description="Raise own ATK by 20% and Dark Resistance by 50% for 2 turns"></Skill>
+	<Skill level="38" name="Gravity Clutch" type="Dark" potency="75%" cooldown="5" target="1" description="Spend 10% of your HP and deal damage equal to 75% of your HP"></Skill>
+	<Skill level="40" name="Syphon Strike" type="Physical" potency="240" cooldown="-" target="1" description="Syphon the soul from your enemy"></Skill>
+	<Skill level="43" name="Black Veil" type="Defensive" potency="-" cooldown="5" target="Self" description="Take double damage from Physical attacks and absorb all Magic damage dealt to you for 3 turns - release all absorbed energy to 1 enemy at the end of 3 turns"></Skill>
+	<Skill level="45" name="Singularity" type="Dark" potency="200" cooldown="-" target="AoE" description="Follow up to Syphon strike"></Skill>
+	<Skill level="48" name="Dark Flame" type="Dark Fire" potency="250" cooldown="7" target="AoE" description="Unleash a blackened flame of darkness on your enemies - affected enemies are burned for 50 potency per turn for 3 turns"></Skill>
+	<Skill level="50" name="Soul Eater" type="Dark" potency="460" cooldown="4" target="1" description="Unleash a blast of dark energy, burning 49% of your HP and regaining 50% of what was dealt as HP"></Skill>
+	<Skill level="53" name="Herald of Death" type="Synergy" potency="100%" cooldown="X" target="Self" description="Increase the damage of your Dark Abilities by 100% for 2 turns"></Skill>
+	<Skill level="53" name="Soul Bind" type="Defensive" potency="-" cooldown="8" target="Self" description="Take all damage for 1 ally for 2 turns - reducing damage you take by 20%"></Skill>
+	<Skill level="57" name="Ominous Aura" type="Dark Heal" potency="50%" cooldown="X" target="1" description="Give an ally 50% of your HP and reduce the damage they take by 50% for 1 turn"></Skill>
+	<Skill level="60" name="Dark Cannon" type="Dark" potency="400" cooldown="7" target="AoE" description="Unleash a torrent of dark blasts on your enemies, spending 75% of your HP"></Skill>
+	<Skill level="60" name="MASTERY - Shadowbringer" type="Dark" potency="1100" cooldown="KO" target="AoE" description="Sacrifice your life to unleash a lightless hellscape"></Skill>
+	<Skill level="60" name="MASTERY - Living Dead" type="Defensive" potency="-" cooldown="X" target="Self" description="Your HP cannot go below 1 for 3 turns"></Skill>
+	<Skill level="60" name="Calamity Rite" type="Dark" potency="TRUE" cooldown="X" target="1" description="Send an unmitigable blast of pure dark energy at your foe, spending 99% of your HP and dealing the spent amount"></Skill>
+</SkillsList>

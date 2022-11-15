@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="31" name="Clash" type="Physical" potency="230" cooldown="-" target="1" description="Unleash a sword burst"></Skill>
+	<Skill level="33" name="Cover" type="Defensive" potency="-" cooldown="-" target="1" description="Cover an ally for 3 turns, taking their physical damage"></Skill>
+	<Skill level="36" name="Sentinel" type="Defensive" potency="30%" cooldown="5" target="Self" description="Reduce damage taken for 3 turns"></Skill>
+	<Skill level="36" name="Light of Judgement" type="Light" potency="100" cooldown="-" target="AoE" description="Unleash a wave of light on your enemies"></Skill>
+	<Skill level="40" name="Lay on Hands" type="Heal" potency="110" cooldown="3" target="1" description="Heal your ally with warm light"></Skill>
+	<Skill level="40" name="Smite" type="Light" potency="300" cooldown="4" target="1" description="Burn your enemy with divine light"></Skill>
+	<Skill level="43" name="Prominence" type="Light" potency="110" cooldown="6" target="1" description="Burn an enemy and reduce 1 Skill cooldown by 1 turn"></Skill>
+	<Skill level="45" name="Guardian" type="Defensive" potency="-" cooldown="-" target="1" description="Soak all an allies damage for 2 turns"></Skill>
+	<Skill level="45" name="Angelic Pride" type="200" potency="200" cooldown="7" target="AoE" description="Heal your allies and burn your enemies with divine light"></Skill>
+	<Skill level="49" name="Force" type="Physical" potency="310" cooldown="-" target="1" description="Follow up to Clash"></Skill>
+	<Skill level="50" name="Intervention" type="Synergy" potency="10%" cooldown="6" target="AoE" description="Reduce party damage for 3 turns"></Skill>
+	<Skill level="53" name="Justice" type="Defensive" potency="-" cooldown="8" target="Self" description="Take all damage for the party 1 turn"></Skill>
+	<Skill level="55" name="Congregate" type="Heal" potency="200" cooldown="10" target="AoE" description="Heal all allies X times where X is the number of current enemies"></Skill>
+	<Skill level="58" name="Godly Chorus" type="Light" potency="300" cooldown="X" target="1" description="If this ability kills an enemy, gain life equal to the damage dealt"></Skill>
+	<Skill level="60" name="Pax Caelestis" type="Light" potency="300" cooldown="5" target="AoE" description="Unleash divine blessings and cure allies of Zombie and Darkness whilst burning your foes"></Skill>
+	<Skill level="60" name="MASTERY - Angiris Praesidio" type="Defensive" potency="90%" cooldown="X" target="AoE" description="Reduce party damage by 90% for 1 turn"></Skill>
+	<Skill level="60" name="MASTERY - Custode Numine" type="Defensive" potency="-" cooldown="X" target="Self" description="For 3 turns, your HP cannot go below 1"></Skill>
+	<Skill level="60" name="MASTERY - Ultima Verbi" type="Heal" potency="-" cooldown="KO" target="1" description="Offer up your life to raise an ally"></Skill>
+</SkillsList>

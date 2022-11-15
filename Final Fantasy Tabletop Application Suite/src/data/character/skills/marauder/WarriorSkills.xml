@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="32" name="Inner Beast" type="Physical" potency="250" cooldown="4" target="1" description="Cleave your opponent in twain"></Skill>
+	<Skill level="32" name="Meat Shield" type="Defensive" potency="30%" cooldown="5" target="Self" description="Reduce damage dealt and reduce damage for 3 turns"></Skill>
+	<Skill level="36" name="Warcry" type="Synergy" potency="15%" cooldown="5" target="AoE" description="Raise party ATK for 2 turns"></Skill>
+	<Skill level="38" name="Axe Heave" type="Ranged" potency="200" cooldown="3" target="1" description="Heave a massive tomahawk"></Skill>
+	<Skill level="38" name="Shoulder Charge" type="TRUE" potency="TRUE" cooldown="6" target="1" description="Throw your full weight into your enemy"></Skill>
+	<Skill level="41" name="Holmgang" type="Defensive" potency="-" cooldown="X" target="Self" description="Prevent most attacks from setting your health below 1 for 2 turns"></Skill>
+	<Skill level="44" name="Infuriate" type="Synergy" potency="-" cooldown="8" target="1" description="Guarantee your next 2 physical attacks to be critical hits"></Skill>
+	<Skill level="47" name="Fellcleave" type="TRUE" potency="TRUE" cooldown="8" target="1" description="Rupture your enemies very being, 40% chance of casting again to a max of 5 casts"></Skill>
+	<Skill level="50" name="Power Stomp" type="Physical" potency="300" cooldown="5" target="AoE" description="Smash through the very landscape"></Skill>
+	<Skill level="52" name="Splatter" type="Earth" potency="-" cooldown="X" target="1" description="Execute an enemy with half your DEF or lower"></Skill>
+	<Skill level="55" name="Earth Cutter" type="Earth" potency="340" cooldown="3" target="1" description="Eradicate your foe with earthen fury"></Skill>
+	<Skill level="57" name="Titan's Wrath" type="Synergy" potency="500" cooldown="X" target="1" description="Unleash infinite rage on your foe"></Skill>
+	<Skill level="60" name="Chaos Vortex" type="Dark" potency="450" cooldown="7" target="AoE" description="Spin your blade at ungodly speeds"></Skill>
+	<Skill level="60" name="MASTERY - Absolute Unit" type="Synergy" potency="-" cooldown="X" target="Self" description="For 2 turns, triple your DEF stat"></Skill>
+	<Skill level="60" name="MASTERY - Dead Man Walking" type="Dark" potency="-" cooldown="KO" target="AoE" description="Unleash a relentless toreent of slashes equal to your current HP"></Skill>
+	<Skill level="60" name="MASTERY - Best Defense" type="Heal" potency="-" cooldown="X" target="Self" description="Heal yourself for the total HP of your entire party combined"></Skill>
+</SkillsList>

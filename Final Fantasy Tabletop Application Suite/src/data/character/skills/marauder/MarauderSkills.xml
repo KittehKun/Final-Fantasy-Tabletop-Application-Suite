@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="1" name="Plunge" type="Physical" potency="100" cooldown="0" target="1" description="Plunge your blade into your foe"></Skill>
+	<Skill level="2" name="Shield Bash" type="Physical" potency="60/20%" cooldown="2" target="1" description="Chance of stunning target, +20% shield"></Skill>
+	<Skill level="4" name="Riot Blade" type="Physical" potency="200" cooldown="-" target="1" description="Follow up to Plunge"></Skill>
+	<Skill level="6" name="Rampart" type="Synergy" potency="20%" cooldown="5" target="Self" description="Reduce damage taken for 2 turns"></Skill>
+	<Skill level="8" name="Berserk" type="Synergy" potency="30%" cooldown="6" target="Self" description="Increase crit rate for 3 turns"></Skill>
+	<Skill level="10" name="Dominance" type="Synergy" potency="50%" cooldown="-" target="Self" description="Increase hatred by 50%"></Skill>
+	<Skill level="13" name="Long Tackle" type="Ranged" potency="120" cooldown="2" target="1" description="Throw yourself into your foes"></Skill>
+	<Skill level="16" name="Point Break" type="Sabotage" potency="30%" cooldown="5" target="1" description="Reduce target DEF for 2 turns"></Skill>
+	<Skill level="19" name="Guard" type="Defensive" potency="-" cooldown="5" target="1" description="Guard an ally for 1 physical attack"></Skill>
+	<Skill level="19" name="Crash" type="Physical" potency="270" cooldown="-" target="1" description="Follow up to Riot Blade"></Skill>
+	<Skill level="21" name="Strong Stance" type="Synergy" potency="50%" cooldown="6" target="Self" description="Reduce physical damage taken for 2 turns"></Skill>
+	<Skill level="24" name="Swivel Strike" type="Physical" potency="160/30%" cooldown="4" target="AoE" description="Spin strike with chance to Charm enemies"></Skill>
+	<Skill level="27" name="Supremacy" type="Synergy" potency="80%" cooldown="5" target="AoE" description="Charm enemy party for 3 turns"></Skill>
+	<Skill level="30" name="Provoke" type="Synergy" potency="100%" cooldown="6" target="1" description="Attract an enemy for 3 turns"></Skill>
+</SkillsList>
