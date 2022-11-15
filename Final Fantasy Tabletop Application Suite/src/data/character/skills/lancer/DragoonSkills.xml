@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="30" name="Jump" type="Physical" potency="450" cooldown="3" target="1" description="Remove yourself from combat for 1 turn then strike"></Skill>
+	<Skill level="32" name="Elusive Jump" type="Synergy" potency="-" cooldown="6" target="Self" description="Remove yourself from combat for 2 turns"></Skill>
+	<Skill level="35" name="Doom Spike" type="Physical" potency="210" cooldown="-" target="AoE" description="Pierce your target and all enemies around them"></Skill>
+	<Skill level="35" name="Helmsplitter" type="Physical" potency="200/30%" cooldown="4" target="1" description="Stab your foe with a chance of paralyzing them"></Skill>
+	<Skill level="38" name="Salamander Roar" type="Fire" potency="200" cooldown="-" target="AoE" description="Roar dragons flames in a cone"></Skill>
+	<Skill level="40" name="Wind Drive" type="Wind" potency="200" cooldown="3" target="1" description="Spiral into your foe with a powerful whirlwind"></Skill>
+	<Skill level="43" name="Spineshatter Dive" type="Physical" potency="400" cooldown="5" target="1" description="Remove yourself from combat for 1 turn then strike"></Skill>
+	<Skill level="45" name="Chaos Thrust" type="Physical" potency="420/100" cooldown="-" target="1" description="Follow up to Disembowel and apply a DoT for 3 turns"></Skill>
+	<Skill level="48" name="Dragonfire Dive" type="Fire" potency="350" cooldown="7" target="AoE" description="Remove yourself from combat for 1 turn then explode wyrm fire on your foes"></Skill>
+	<Skill level="50" name="Soul-Bound" type="Sabotage" potency="50%" cooldown="X" target="1" description="Target non-boss enemy taakes 150% damage until death or end of combat"></Skill>
+	<Skill level="52" name="Blood of the Dragon" type="Synergy" potency="-" cooldown="-" target="Self" description="Unleash your dragon blood, granting access to your blood abilities for 3 turns"></Skill>
+	<Skill level="52" name="Fang and Claw" type="Blood" potency="320" cooldown="5" target="1" description="Unleash a barrage of slashes and stabs"></Skill>
+	<Skill level="55" name="Wheeling Thrust" type="Blood" potency="450" cooldown="-" target="1" description="Follow up to Fang and Claw"></Skill>
+	<Skill level="58" name="Geirskogul" type="Blood" potency="270" cooldown="5" target="AoE" description="Unleash a giant thrust on your foe and all enemies behind them"></Skill>
+	<Skill level="58" name="Sonic Thrust" type="Physical" potency="210" cooldown="-" target="AoE" description="Follow up to Doom Spike"></Skill>
+	<Skill level="58" name="Mighty Leap" type="Physical" potency="570" cooldown="8" target="1" description="Remove yourself from combat for 1 turn then strike"></Skill>
+	<Skill level="60" name="Nastrond" type="Blood" potency="540" cooldown="-" target="AoE" description="Follow up to Geirskogul"></Skill>
+	<Skill level="60" name="MASTERY - Stardiver" type="Blood Dragon" potency="1000" cooldown="X" target="1" description="Release all your fury upon your foe, double damage to dragons"></Skill>
+	<Skill level="60" name="MASTERY - Aerial Supremacy" type="Synergy" potency="100%" cooldown="X" target="1" description="Double all jump damage next jump"></Skill>
+	<Skill level="60" name="MASTERY - Elderwyrms Final Sermon" type="Blood Dragon" potency="2000" cooldown="KO" target="1" description="Become one with the wyrms of old, ignite your soul and unleash the fury of a thousand fallen brethren upon your foe"></Skill>
+</SkillsList>

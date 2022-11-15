@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="1" name="True Thrust" type="Physical" potency="100" cooldown="0" target="1" description="A measured thrust"></Skill>
+	<Skill level="2" name="Vorpal Thrust" type="210" potency="0" cooldown="-" target="1" description="Follow up to True Thrust"></Skill>
+	<Skill level="4" name="Life Surge" type="Synergy" potency="100%" cooldown="3" target="Self" description="Your next attack deals double damage, heal for 10% (Stacks with rolling a crit)"></Skill>
+	<Skill level="7" name="Pierce" type="Sabotage" potency="20%" cooldown="4" target="1" description="Reduces target DEF"></Skill>
+	<Skill level="10" name="Piercing Talon" type="Ranged" potency="110" cooldown="0" target="1" description="Hurl your lance at your foe"></Skill>
+	<Skill level="13" name="Disembowel" type="Physical" potency="300" cooldown="4" target="1" description="Cut your foe deep, increasing the damage  they take by 20% for 2 turns"></Skill>
+	<Skill level="17" name="Sharpen" type="Synergy" potency="25%" cooldown="5" target="Self" description="Raise your ATK for 3 turns"></Skill>
+	<Skill level="20" name="Strafe" type="Synergy" potency="-" cooldown="5" target="Self" description="Dodge the next physical attack targeting you"></Skill>
+	<Skill level="20" name="Full Thrust" type="Physical" potency="350" cooldown="-" target="1" description="Follow up to Vorpal Thrust"></Skill>
+	<Skill level="23" name="Let" type="Sabotage" potency="90" cooldown="4" target="1" description="Prevent an enemy from healing for 2 turns"></Skill>
+	<Skill level="27" name="Impale" type="Sabotage" potency="20%" cooldown="5" target="1" description="Chance of disabling a foe for 1 turn"></Skill>
+	<Skill level="30" name="Lance Charge" type="Synergy" potency="170/50" cooldown="-" target="1" description="Quick stab with DoT 3 turns"></Skill>
+</SkillsList>

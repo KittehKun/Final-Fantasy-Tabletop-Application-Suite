@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SkillsList>
+	<!--<Skill level="" name="" type="" potency="" cooldown="" target="" description=""></Skill> This is a template-->
+	<Skill level="30" name="Choco Cure" type="Heal" potency="60B" cooldown="2" target="1" description="Heal your ally"></Skill>
+	<Skill level="32" name="Choco Red" type="Form" potency="15%" cooldown="-" target="Self" description="Convert your Chocobo to a red Chocobo, increasing its ATK/DEX by 15% while active"></Skill>
+	<Skill level="35" name="Dual-Leap" type="Physical" potency="200&amp;" cooldown="2" target="1" description="Remove yourself and your Chocobo from combat for 1 turn then strike"></Skill>
+	<Skill level="35" name="Choco Kick" type="Physical" potency="210B" cooldown="-" target="1" description="Your Chocobo delivers a killer kick"></Skill>
+	<Skill level="38" name="Choco Break" type="Physical" potency="140B" cooldown="2" target="1" description="Deliver a blow with a 20% chance of stunning the target"></Skill>
+	<Skill level="40" name="Choco Blue" type="Form" potency="15%" cooldown="-" target="Self" description="Convert your Chocobo to a blue Chocobo increasing its DEF by 15% while active"></Skill>
+	<Skill level="43" name="Choco Meteor" type="Non-elemental" potency="350B" cooldown="5" target="1" description="Summon a small meteor down on your foe"></Skill>
+	<Skill level="45" name="Choco Recharge" type="Synergy" potency="-" cooldown="7" target="Self" description="Reduce 2 abilities cooldowns by 1 turn"></Skill>
+	<Skill level="48" name="Fat Chocobo" type="Physical" potency="250B" cooldown="5" target="1" description="Your Chocobo puffs out its chest and drops on your enemy with all its weight"></Skill>
+	<Skill level="50" name="Choco Green" type="Form" potency="15%" cooldown="-" target="Self" description="Convert your Chocobo to a Green Chocobo, increasing its SPR/MAG by 15% each while active"></Skill>
+	<Skill level="52" name="Choco Guard" type="Defensive" potency="-" cooldown="5" target="Self" description="Reduce damage taken by 15% for 2 turns and increase target chance by 10%"></Skill>
+	<Skill level="52" name="Choco Esuna" type="Heal" potency="-" cooldown="3" target="1" description="Cure your allies of most ailments"></Skill>
+	<Skill level="55" name="Choco Surge" type="Synergy" potency="30%" cooldown="X" target="Self" description="Increase your healing potency by 30 for 5 turns, only usable in Choco Green form"></Skill>
+	<Skill level="58" name="Choco Blast" type="Fire" potency="240B" cooldown="3" target="AoE" description="Your Chocobo spits out a cone of fire on your foes"></Skill>
+	<Skill level="58" name="Choco Strike" type="Thunder" potency="180B" cooldown="2" target="AoE" description="Your Chocobo fans out electricity in a cone on your foes, only useable in base form"></Skill>
+	<Skill level="60" name="Choco Phalanx" type="Defensive" potency="-" cooldown="X" target="Self" description="Your Chocobo steels its wings in a shield formation in front of it to reduce the chance of being targeted for 3 turns by 50%, only useable in Choco Blue form"></Skill>
+	<Skill level="60" name="Choco Rush" type="Physical" potency="280B" cooldown="3" target="1" description="Your Chocobo gets a running start and sprints right into your enemy at full force, only useable in Choco Red form"></Skill>
+	<Skill level="60" name="MASTERY - Choco Trinity" type="Fire, Thunder, Wind" potency="450B" cooldown="6" target="1" description="Your Chocobo unleashes all three violent elements in a focused blast"></Skill>
+	<Skill level="60" name="MASTERY - Choco Trifecta" type="Ice, Water, Earth" potency="450B" cooldown="6" target="1" description="Your Chocobo unleashes all three foundation elements in a focused blast"></Skill>
+	<Skill level="60" name="MASTERY - Blitzkrieg Bird" type="Physical" potency="850B" cooldown="X" target="AoE" description="Your Chocobo calls on all the might of his brethren and stampede rushes your foe"></Skill>
+</SkillsList>

@@ -111,8 +111,8 @@ namespace Final_Fantasy_Tabletop_Application_Suite
         /// <returns>A List of Skills objects.</returns>
         private List<Skills> ProcessSkills(string characterClass)
         {
-            List<Skills> skills = new List<Skills>();
-            List<AscensionSkills> ascensionSkills = new List<AscensionSkills>();
+            List<Skills> skills = new List<Skills>(); //FOR TESTING PURPOSES
+            List<AscensionSkills> ascensionSkills = new List<AscensionSkills>(); //FOR TESTING PURPOSES
             switch (characterClass)
             {
                 case "Archer":
@@ -123,6 +123,11 @@ namespace Final_Fantasy_Tabletop_Application_Suite
                 case "Marauder":
                     skills = CharacterUtilities.LoadSkills(characterClass);
                     //ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "Paladin"); //FOR TESTING PURPOSES
+                    //this.character!.SetAscensionSkills(ascensionSkills);
+                    break;
+                case "Lancer":
+                    skills = CharacterUtilities.LoadSkills(characterClass);
+                    //ascensionSkills = CharacterUtilities.LoadAscensionSkills(characterClass, "ChocoboKnight"); //FOR TESTING PURPOSES
                     //this.character!.SetAscensionSkills(ascensionSkills);
                     break;
                 default:
